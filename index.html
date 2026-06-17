@@ -216,9 +216,9 @@ const CAT={task:'任務',bug:'Bug',dept:'他部門'};
 let BOARD, SYNC, DATA={}, INBOX={items:[]};
 
 /* ---- seed fallbacks (used on file:// or before fetch) ---- */
-const SEED_DATA={generated_at:"2026-06-17T10:35:00+08:00",source:"種子資料",north_star:{label:"累計碰面組數",value:"50+",meta:"NORTH STAR · 每月成功完成的約會"},
- metrics:[{lab:"WAU 週活躍",num:"1,025",sub:"$SCREEN WEEKLY ACTIVE",tr:"up"},{lab:"MAU 月活躍",num:"2,319",sub:"目標 5,000",tr:"up"},{lab:"本週配對成功",num:"~210",sub:"MATCH_SUCCESS · 7D",tr:"flat"},{lab:"本週雙方成交",num:"4",sub:"DEPOSIT_BOTH · 7D · 漏斗破口",tr:"down",ember:true},{lab:"男 / 女",num:"76/17",sub:"GENDER %",tr:"down"},{lab:"D7 留存",num:"43.4%",sub:"目標 > 30%",tr:"flat"}],
- funnel:{matches:210,deposits:4,rate:"1.9%"},today:[{t:"週會：Superlike PRD + 6 大議題拍板",r:"全員"},{t:"會中定案：同性別篩選 / 週末上線 / 租辦公室 / 自動化",r:"CEO"}]};
+const SEED_DATA={generated_at:"2026-06-17T17:37:00+08:00",source:"內建種子（部署後改讀 data.json）",north_star:{label:"累計碰面組數",value:"66",meta:"NORTH STAR · 每月成功完成的約會"},
+ metrics:[{lab:"WAU 週活躍",num:"1,026",sub:"$SCREEN WEEKLY ACTIVE · 6/16",tr:"flat"},{lab:"MAU 月活躍",num:"2,320",sub:"目標 5,000",tr:"up"},{lab:"本週配對成功",num:"212",sub:"MATCH_SUCCESS · 近7日",tr:"flat"},{lab:"本週雙方成交",num:"4",sub:"DEPOSIT_BOTH · 近7日 · 漏斗破口",tr:"down",ember:true},{lab:"男 / 女",num:"76/17",sub:"GENDER %",tr:"down"},{lab:"D7 留存",num:"43.4%",sub:"目標 > 30%",tr:"flat"}],
+ funnel:{matches:212,deposits:4,rate:"1.9%"},today:[{t:"Superlike PRD 定稿交 RD",r:"PM"},{t:"校準 OKR / 北極星指標",r:"CEO"},{t:"商家合作 final + 桃園夜更",r:"BD"}]};
 const DEF_BOARD={tasks:[
   {id:'t1',t:'Superlike PRD / Spec 定稿',s:'doing',team:'產品',prio:'urgent',owner:'Jesse',due:'6/18'},
   {id:'t2',t:'客製化約會 PRD + 收費方式 + prototype',s:'doing',team:'產品',prio:'urgent',owner:'Jesse',due:'6/24'},
@@ -341,13 +341,15 @@ async function syncDown(){if(!confirm('從雲端 board.json 覆蓋本機編輯�
  try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已從雲端載入');}catch(e){setSyncState('雲端尚無 board.json');}}
 function exportLocal(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([payload()],{type:'application/json'}));a.download='board_backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();}
 
-/* ---- live data ---- */
-async function loadData(){
- try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});DATA=r.ok?await r.json():SEED_DATA;}catch(e){DATA=SEED_DATA;}
- try{const r=await fetch('inbox.json?t='+Date.now(),{cache:'no-store'});INBOX=r.ok?await r.json():SEED_INBOX;}catch(e){INBOX=SEED_INBOX;}
- renderAll();}
+/* ---- live data (seed first, then fetch with timeout — never blank, never hang) ---- */
+function showErr(msg){let b=document.getElementById('errbar');if(!b){b=document.createElement('div');b.id='errbar';b.style.cssText='position:fixed;left:0;right:0;bottom:0;background:#9a2a1a;color:#fff;font:12px/1.5 ui-monospace,monospace;padding:8px 14px;z-index:90;white-space:pre-wrap';document.body.appendChild(b);}b.textContent='⚠ '+msg;}
+function renderSafe(){try{renderAll();}catch(e){showErr('render: '+((e&&e.message)||e));}}
+async function fetchJSON(url){const c=new AbortController();const t=setTimeout(()=>c.abort(),8000);
+ try{const r=await fetch(url+'?t='+Date.now(),{cache:'no-store',signal:c.signal});clearTimeout(t);if(!r.ok)return null;return await r.json();}catch(e){clearTimeout(t);return null;}}
+async function loadData(){const d=await fetchJSON('data.json');if(d)DATA=d;const ib=await fetchJSON('inbox.json');if(ib)INBOX=ib;renderSafe();}
 let started=false;
-function start(){if(started)return;started=true;loadBoard();loadSync();setSyncState(SYNC.token?'已設定同步':'本機暫存');loadData();setInterval(loadData,60000);}
+function start(){if(started)return;started=true;loadBoard();loadSync();setSyncState(SYNC.token?'已設定同步':'本機暫存');DATA=SEED_DATA;INBOX=SEED_INBOX;renderSafe();loadData();setInterval(loadData,60000);}
+window.onerror=function(m,s,l){showErr((m||'錯誤')+' @line '+(l||'?'));};
 document.getElementById('mb').addEventListener('click',e=>{if(e.target.id==='mb')closeMb();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMb();});
 </script>
