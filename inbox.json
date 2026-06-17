@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-06-17T08:10:00+08:00",
+  "source": "ClickUp 頻道 + Google Drive 會議記錄（種子範例）",
+  "items": [
+    { "id": "ib_seed1", "title": "通知顯示「約會在 12 天後」但用戶根本沒有約會", "cat": "bug", "src": "ClickUp · Lava 頻道", "date": "6/9" },
+    { "id": "ib_seed2", "title": "詐騙帳號被 ban 後可用原手機/email 重新註冊？需擋", "cat": "task", "src": "ClickUp · Lava 頻道", "date": "6/11" },
+    { "id": "ib_seed3", "title": "店家 enterprise 版 Half Check 上線時間？", "cat": "dept", "src": "ClickUp · Lava 頻道", "date": "6/9" },
+    { "id": "ib_seed4", "title": "Google Sheet 串接何時可用（海巡/場次資料源）", "cat": "task", "src": "ClickUp · Lava 頻道", "date": "6/8" }
+  ]
+}

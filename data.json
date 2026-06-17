@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-06-17T10:35:00+08:00",
+  "source": "PostHog 98614 + ClickUp（種子資料）",
+  "north_star": { "label": "累計碰面組數", "value": "50+", "meta": "NORTH STAR · 每月成功完成的約會場次" },
+  "metrics": [
+    { "lab": "WAU 週活躍", "num": "1,025", "sub": "$SCREEN WEEKLY ACTIVE", "tr": "up" },
+    { "lab": "MAU 月活躍", "num": "2,319", "sub": "目標 5,000", "tr": "up" },
+    { "lab": "本週配對成功", "num": "~210", "sub": "MATCH_SUCCESS · 7D", "tr": "flat" },
+    { "lab": "本週雙方成交", "num": "4", "sub": "DEPOSIT_BOTH · 7D · 漏斗破口", "tr": "down", "ember": true },
+    { "lab": "男 / 女", "num": "76/17", "sub": "GENDER SPLIT %", "tr": "down" },
+    { "lab": "D7 留存", "num": "43.4%", "sub": "目標 > 30%", "tr": "flat" }
+  ],
+  "funnel": { "matches": 210, "deposits": 4, "rate": "1.9%" },
+  "tasks": { "total": 16, "open": 16, "done": 0, "due_today": 1, "overdue": 0, "next7": 13 },
+  "today": [
+    { "t": "週會：Superlike PRD + 6 大議題拍板", "r": "全員" },
+    { "t": "會中定案：同性別篩選 / 週末上線 / 租辦公室 / 自動化", "r": "CEO" },
+    { "t": "HalfCheck Dashboard UX 動議與 Stan 對齊", "r": "PM" }
+  ]
+}

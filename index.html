@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAVA · Living Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+ color-scheme:light;
+ --bg:#f4f1ea;--panel:#ffffff;--panel2:#faf7f1;--ink:#241f1a;--ink2:#5a5048;--muted:#8a7d6e;
+ --ember:#E84224;--ember-ink:#b3311a;--gold:#a9863f;--gold-soft:#c9a24b;--line:#e7e0d4;--line2:#efe9df;
+ --ok:#1c8a4e;--warn:#a85a00;
+ --disp:'Fraunces',Georgia,serif;--mono:'IBM Plex Mono',ui-monospace,monospace;--sans:'Inter','PingFang TC','Microsoft JhengHei',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;min-height:100vh;-webkit-font-smoothing:antialiased;
+ background-image:radial-gradient(1100px 480px at 88% -10%,rgba(232,66,36,.06),transparent 60%)}
+.mono{font-family:var(--mono);letter-spacing:.04em}
+/* GATE */
+#gate{position:fixed;inset:0;background:var(--bg);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .4s}
+#gate.hidden{opacity:0;pointer-events:none}
+.glogo{background:var(--ember);color:#fff;font-family:var(--mono);font-weight:600;letter-spacing:.3em;font-size:15px;padding:5px 13px;border-radius:6px}
+.gsub{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+.gform{display:flex;gap:8px}
+#pw{background:#fff;border:1.5px solid var(--line);color:var(--ink);font-family:var(--mono);font-size:15px;letter-spacing:.1em;padding:12px 15px;width:240px;border-radius:8px;outline:none;text-align:center}
+#pw:focus{border-color:var(--ember)}
+.gbtn{background:var(--ember);color:#fff;border:none;border-radius:8px;padding:0 20px;cursor:pointer;font-family:var(--sans);font-weight:600;font-size:14px}
+#gerr{color:var(--ember-ink);font-family:var(--mono);font-size:12px;height:14px;letter-spacing:.06em}
+/* TOPBAR */
+.bar{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+.bar-in{max-width:1180px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .logo{background:var(--ember);color:#fff;font-family:var(--mono);font-weight:600;letter-spacing:.24em;font-size:14px;padding:5px 12px;border-radius:6px}
+.brand .ttl{font-family:var(--disp);font-size:21px;font-weight:500;letter-spacing:.01em}
+.live{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pulse{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink2);text-transform:uppercase}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--gold-soft)}
+.dot.fresh{background:var(--ok);animation:pg 2.4s infinite}
+.dot.stale{background:var(--warn)}.dot.dead{background:var(--ember)}
+@keyframes pg{0%{box-shadow:0 0 0 0 rgba(28,138,78,.45)}70%{box-shadow:0 0 0 10px rgba(28,138,78,0)}100%{box-shadow:0 0 0 0 rgba(28,138,78,0)}}
+.stamp{font-family:var(--mono);font-size:12px;color:var(--ink2);text-align:right;line-height:1.5}
+.stamp b{color:var(--ink);font-weight:500}
+.tabs{max-width:1180px;margin:0 auto;padding:0 18px;display:flex;gap:4px;overflow-x:auto}
+.tab{padding:13px 16px;font-size:14px;color:var(--ink2);cursor:pointer;border-bottom:2.5px solid transparent;white-space:nowrap;font-weight:500}
+.tab:hover{color:var(--ember-ink)}
+.tab.active{color:var(--ink);border-bottom-color:var(--ember);font-weight:600}
+.tab .pill{background:var(--ember);color:#fff;font-size:11px;font-family:var(--mono);padding:1px 7px;border-radius:9px;margin-left:6px;vertical-align:middle}
+/* SYNC BAR */
+.syncbar{max-width:1180px;margin:0 auto;padding:10px 26px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line2)}
+.sbtn{padding:7px 13px;border-radius:8px;font-size:13px;cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--ink2);font-family:var(--sans);font-weight:500}
+.sbtn:hover{border-color:var(--gold-soft);color:var(--ink)}
+.sbtn.pri{background:var(--ember);color:#fff;border-color:var(--ember)}
+.sbtn.pri:hover{opacity:.92;color:#fff}
+.sync-state{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 26px 60px}
+.page{display:none}.page.active{display:block}
+.sectag{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin:24px 0 13px;display:flex;align-items:center;gap:10px}
+.sectag::after{content:"";flex:1;height:1px;background:var(--line)}
+.sectag:first-child{margin-top:4px}
+/* HERO + METRICS */
+.hero{display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;margin:6px 0 4px}
+.hero .nv{font-family:var(--disp);font-weight:500;font-size:88px;line-height:.85;color:var(--ember)}
+.hero .nl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;padding-bottom:8px}
+.hero .nm{font-size:13px;color:var(--ink2);padding-bottom:12px;max-width:230px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.cell{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;position:relative}
+.cell .lab{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink2);text-transform:uppercase;font-weight:500}
+.cell .num{font-family:var(--disp);font-weight:500;font-size:42px;line-height:1;margin:10px 0 6px;letter-spacing:-.01em}
+.cell .sub{font-size:12px;color:var(--muted)}
+.cell .tr{position:absolute;top:16px;right:15px;font-family:var(--mono);font-size:13px;font-weight:500}
+.tr.up{color:var(--ok)}.tr.down{color:var(--ember-ink)}.tr.flat{color:var(--muted)}
+.cell.ember{background:linear-gradient(180deg,#fff,#fff6f3);border-color:#f1c4b8}
+.cell.ember .num{color:var(--ember)}
+.funnel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-top:12px}
+.fl{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.fstep .fv{font-family:var(--disp);font-size:42px;font-weight:500;line-height:1}
+.fstep .fk{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink2);text-transform:uppercase;margin-top:3px}
+.fbar{flex:1;min-width:120px;height:3px;background:linear-gradient(90deg,var(--gold-soft),var(--ember));border-radius:2px;position:relative}
+.fbar::after{content:"▶";position:absolute;right:-3px;top:-9px;color:var(--ember);font-size:13px}
+.frate{font-family:var(--mono);font-size:14px;color:var(--ember-ink);font-weight:500}
+.fnote{font-size:13px;color:var(--ink2);margin-top:14px;line-height:1.6}
+/* CARDS / CRUD */
+.head-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.head-row h2{font-family:var(--disp);font-weight:500;font-size:22px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;border-left:4px solid var(--gold-soft);position:relative}
+.card.s-doing{border-left-color:var(--ember)}.card.s-todo{border-left-color:var(--gold-soft)}.card.s-plan{border-left-color:#3d5af1}
+.card.s-done{border-left-color:var(--ok);opacity:.7}.card.s-block{border-left-color:#9a2a1a}.card.s-hold{border-left-color:#9a8c79}
+.card .ct{font-size:15px;font-weight:600;line-height:1.4;padding-right:48px}
+.card .acts{position:absolute;top:12px;right:12px;display:flex;gap:5px}
+.ib{width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:13px;color:var(--ink2);display:flex;align-items:center;justify-content:center}
+.ib:hover{border-color:var(--ember);color:var(--ember)}
+.bdg{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.b{font-size:11.5px;padding:3px 9px;border-radius:11px;font-weight:600}
+.b.st{color:#fff}.st-doing{background:var(--ember)}.st-todo{background:var(--gold)}.st-plan{background:#3d5af1}.st-done{background:var(--ok)}.st-block{background:#9a2a1a}.st-hold{background:#9a8c79}
+.b.team{background:#f0ebe2;color:var(--ink2)}.b.cat{background:#eef1fd;color:#3a4ec0}.b.cat.bug{background:#fdecea;color:#b3311a}.b.cat.dept{background:#fff4e5;color:#a85a00}
+.b.pri-urgent{background:#fdecea;color:#b3311a;border:1px solid #f1c4b8}.b.pri-high{background:#fff4e5;color:#a85a00;border:1px solid #ecd3a6}
+.meta{font-size:12px;color:var(--muted);margin-top:9px;display:flex;gap:12px;flex-wrap:wrap}
+.meta b{color:var(--ink2);font-weight:600}
+.note{font-size:13px;color:var(--ink2);margin-top:10px;padding-top:9px;border-top:1px dashed var(--line)}
+.empty{color:var(--muted);font-size:14px;padding:26px;text-align:center;background:var(--panel);border:1px dashed var(--line);border-radius:12px}
+/* INBOX */
+.inbox{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:18px}
+.inbox .ih{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.inbox .ih .t{font-family:var(--disp);font-size:18px;font-weight:500}
+.inbox .ih .c{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.inbox .id{font-size:12.5px;color:var(--ink2);margin-bottom:12px}
+.irow{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line2)}
+.irow .it{flex:1}
+.irow .itt{font-size:14.5px;font-weight:600;line-height:1.4}
+.irow .im{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:4px}
+.irow .ia{display:flex;gap:6px}
+.acc{background:var(--ok);color:#fff;border:none;border-radius:7px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+.dis{background:#fff;color:var(--ink2);border:1px solid var(--line);border-radius:7px;padding:6px 10px;font-size:13px;cursor:pointer;font-family:var(--sans)}
+.dis:hover{border-color:var(--ember);color:var(--ember)}
+/* AGENDA */
+.agitem{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:9px;display:flex;gap:13px;align-items:flex-start}
+.agn{width:30px;height:30px;border-radius:50%;background:var(--ember);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.agm{flex:1}.agt{font-size:15.5px;font-weight:600}.ags{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:3px;display:flex;gap:14px;flex-wrap:wrap}
+.agnote{font-size:13px;color:var(--ink2);margin-top:6px}
+/* MODAL */
+.mb{position:fixed;inset:0;background:rgba(36,31,26,.4);display:none;align-items:center;justify-content:center;z-index:80;padding:20px}
+.mb.open{display:flex}
+.modal{background:#fff;border-radius:16px;width:480px;max-width:100%;max-height:90vh;overflow:auto;box-shadow:0 18px 56px rgba(0,0,0,.22)}
+.mh{padding:16px 20px;font-family:var(--disp);font-size:19px;font-weight:600;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff}
+.mh .x{cursor:pointer;color:var(--muted);font-size:22px}.mh .x:hover{color:var(--ember)}
+.mbd{padding:18px 20px}
+.fld{margin-bottom:13px}.fld label{display:block;font-size:12.5px;color:var(--ink2);font-weight:600;margin-bottom:5px}
+.fld input,.fld select,.fld textarea{width:100%;padding:10px 12px;font-size:14.5px;border:1px solid var(--line);border-radius:9px;font-family:inherit;background:var(--panel2);color:var(--ink)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--gold-soft);background:#fff}
+.fld textarea{resize:vertical;min-height:64px}
+.fld.chk{display:flex;align-items:center;gap:9px}.fld.chk input{width:auto}.fld.chk label{margin:0}
+.mf{display:flex;gap:9px;padding:0 20px 20px}.mf button{flex:1;padding:11px;border-radius:9px;font-size:14.5px;font-weight:600;cursor:pointer;font-family:inherit}
+.save{background:var(--ember);color:#fff;border:none}.cancel{background:#fff;color:var(--ink2);border:1px solid var(--line)}.del{background:#fff;color:var(--ember-ink);border:1px solid #f1c4b8}
+.hint{font-size:12.5px;color:var(--ink2);background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:11px 13px;line-height:1.6}
+.foot{margin-top:36px;border-top:1px solid var(--line);padding-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+a{color:var(--ember-ink)}
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="glogo">LAVA</div>
+  <div class="gsub">Living Dashboard · Restricted</div>
+  <form class="gform" onsubmit="return tryGate(event)"><input id="pw" type="password" placeholder="PASSWORD" autocomplete="off" autofocus><button class="gbtn" type="submit">進入</button></form>
+  <div id="gerr"></div>
+</div>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="brand"><span class="logo">LAVA</span><span class="ttl">Living Dashboard</span></div>
+    <div class="live">
+      <div class="pulse"><span class="dot" id="dot"></span><span id="freshTxt">連線中…</span></div>
+      <div class="stamp">指標最後更新<br><b id="updAbs">—</b> · <span id="updRel">—</span></div>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div class="syncbar">
+    <button class="sbtn pri" onclick="syncUp()">⬆ 同步雲端</button>
+    <button class="sbtn" onclick="syncDown()">⬇ 從雲端載入</button>
+    <button class="sbtn" onclick="openSync()">⚙ 同步設定</button>
+    <button class="sbtn" onclick="exportLocal()">💾 匯出備份</button>
+    <span class="sync-state" id="syncState">本機暫存</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="page active" id="p-overview">
+    <div class="sectag">North Star</div>
+    <div class="hero"><div class="nv" id="nsVal">—</div><div><div class="nl" id="nsLab">—</div><div class="nm" id="nsMeta"></div></div></div>
+    <div class="sectag">產品指標 · PostHog（自動更新）</div>
+    <div class="grid" id="metrics"></div>
+    <div class="sectag">轉換 · 配對 → 成交</div>
+    <div class="funnel" id="funnel"></div>
+    <div class="sectag">今日焦點</div>
+    <div class="cards" id="today"></div>
+  </div>
+
+  <div class="page" id="p-tasks">
+    <div id="inboxBox"></div>
+    <div class="head-row"><h2>任務</h2><button class="sbtn pri" onclick="openEd('tasks')">+ 新增任務</button></div>
+    <div class="cards" id="tasks"></div>
+  </div>
+
+  <div class="page" id="p-goals">
+    <div class="head-row"><h2>目標 / OKR</h2><button class="sbtn pri" onclick="openEd('goals')">+ 新增目標</button></div>
+    <div class="cards" id="goals"></div>
+  </div>
+
+  <div class="page" id="p-agenda">
+    <div class="head-row"><h2>會議 Agenda</h2><button class="sbtn pri" onclick="openEd('agenda')">+ 新增議程</button></div>
+    <div id="agenda"></div>
+  </div>
+
+  <div class="foot"><span id="fSrc">SOURCE · —</span><span>LAVA · fewer texts, better dates</span><span id="fGen">GEN · —</span></div>
+</div>
+
+<div class="mb" id="mb"><div class="modal">
+  <div class="mh"><span id="mTitle">編輯</span><span class="x" onclick="closeMb()">×</span></div>
+  <div class="mbd" id="mBody"></div>
+  <div class="mf"><button class="del" id="bDel" onclick="delEd()">刪除</button><button class="cancel" onclick="closeMb()">取消</button><button class="save" onclick="saveEd()">儲存</button></div>
+</div></div>
+
+<script>
+const PW_HASH="74c0b9bfdc05e619ce48ffb4fab86e9fa6f7164af39e3a01fa8404efb502a353"; // sha256("lava2026")
+async function sha256(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function tryGate(e){e.preventDefault();const h=await sha256(document.getElementById('pw').value);if(h===PW_HASH){sessionStorage.setItem('lava_ok','1');open_();}else document.getElementById('gerr').textContent='密碼錯誤';return false;}
+function open_(){document.getElementById('gate').classList.add('hidden');start();}
+if(sessionStorage.getItem('lava_ok')==='1')open_();
+
+const LSB='lava_board_v1', LSS='lava_sync_v1';
+const SL={doing:'進行中',todo:'待辦',plan:'待討論',block:'卡關',done:'完成',hold:'暫停'};
+const CAT={task:'任務',bug:'Bug',dept:'他部門'};
+let BOARD, SYNC, DATA={}, INBOX={items:[]};
+
+/* ---- seed fallbacks (used on file:// or before fetch) ---- */
+const SEED_DATA={generated_at:"2026-06-17T10:35:00+08:00",source:"種子資料",north_star:{label:"累計碰面組數",value:"50+",meta:"NORTH STAR · 每月成功完成的約會"},
+ metrics:[{lab:"WAU 週活躍",num:"1,025",sub:"$SCREEN WEEKLY ACTIVE",tr:"up"},{lab:"MAU 月活躍",num:"2,319",sub:"目標 5,000",tr:"up"},{lab:"本週配對成功",num:"~210",sub:"MATCH_SUCCESS · 7D",tr:"flat"},{lab:"本週雙方成交",num:"4",sub:"DEPOSIT_BOTH · 7D · 漏斗破口",tr:"down",ember:true},{lab:"男 / 女",num:"76/17",sub:"GENDER %",tr:"down"},{lab:"D7 留存",num:"43.4%",sub:"目標 > 30%",tr:"flat"}],
+ funnel:{matches:210,deposits:4,rate:"1.9%"},today:[{t:"週會：Superlike PRD + 6 大議題拍板",r:"全員"},{t:"會中定案：同性別篩選 / 週末上線 / 租辦公室 / 自動化",r:"CEO"}]};
+const DEF_BOARD={tasks:[
+  {id:'t1',t:'Superlike PRD / Spec 定稿',s:'doing',team:'產品',prio:'urgent',owner:'Jesse',due:'6/18'},
+  {id:'t2',t:'客製化約會 PRD + 收費方式 + prototype',s:'doing',team:'產品',prio:'urgent',owner:'Jesse',due:'6/24'},
+  {id:'t3',t:'商家合作 final + 前置作業',s:'doing',team:'BD',prio:'urgent',owner:'Jesse+WY',due:'6/19'},
+  {id:'t4',t:'PostHog 追蹤稽核（match→deposit 破口）',s:'todo',team:'數據',prio:'high',owner:'Jesse',due:'6/22'}
+ ],
+ goals:[
+  {id:'g1',t:'女性用戶占比 → 50%',s:'doing',note:'目前 ~17%，核心增長缺口'},
+  {id:'g2',t:'WAU → 3,000 / MAU → 5,000',s:'doing',note:'實際 WAU ~1,025'},
+  {id:'g3',t:'每月成功完成約會場次（北極星）',s:'doing',note:'累計碰面破 50'}
+ ],
+ agenda:[
+  {id:'a1',topic:'Superlike PRD + Sprint planning',owner:'Jesse',mins:'20',note:''},
+  {id:'a2',topic:'同性別篩選 / 週末上線 / 租辦公室 / 自動化',owner:'全員',mins:'25',note:''}
+ ],
+ accepted:[],dismissed:[]};
+const SEED_INBOX={generated_at:"2026-06-17T08:10:00+08:00",items:[
+  {id:'ib_seed1',title:'通知顯示「約會在 12 天後」但用戶根本沒有約會',cat:'bug',src:'ClickUp · Lava 頻道',date:'6/9'},
+  {id:'ib_seed2',title:'詐騙帳號被 ban 後可用原手機/email 重新註冊？需擋',cat:'task',src:'ClickUp · Lava 頻道',date:'6/11'},
+  {id:'ib_seed3',title:'店家 enterprise 版 Half Check 上線時間？',cat:'dept',src:'ClickUp · Lava 頻道',date:'6/9'},
+  {id:'ib_seed4',title:'Google Sheet 串接何時可用',cat:'task',src:'ClickUp · Lava 頻道',date:'6/8'}
+]};
+
+function clone(o){return JSON.parse(JSON.stringify(o));}
+function uid(p){return p+'_'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);}
+function loadBoard(){try{BOARD=JSON.parse(localStorage.getItem(LSB));}catch(e){}if(!BOARD)BOARD=clone(DEF_BOARD);['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);}
+function saveBoard(){BOARD.updatedAt=new Date().toISOString();localStorage.setItem(LSB,JSON.stringify(BOARD));setSyncState('本機已存（未同步）');}
+function loadSync(){try{SYNC=JSON.parse(localStorage.getItem(LSS));}catch(e){}SYNC=SYNC||{owner:'',repo:'',branch:'main',token:''};}
+function saveSync(){localStorage.setItem(LSS,JSON.stringify(SYNC));}
+
+/* ---- tabs ---- */
+const TABS=[['overview','總覽'],['tasks','任務'],['goals','目標'],['agenda','Agenda']];
+function renderTabs(){const b=document.getElementById('tabs');b.innerHTML='';const inboxN=(INBOX.items||[]).filter(notHandled).length;
+ TABS.forEach(([id,l])=>{const e=document.createElement('div');e.className='tab'+(cur===id?' active':'');e.innerHTML=l+(id==='tasks'&&inboxN?` <span class="pill">${inboxN}</span>`:'');e.onclick=()=>{cur=id;document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('p-'+id).classList.add('active');renderTabs();};b.appendChild(e);});}
+let cur='overview';
+
+/* ---- render overview from DATA ---- */
+function esc(s){return(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function relTime(iso){const t=new Date(iso).getTime();if(isNaN(t))return'—';const d=Math.round((Date.now()-t)/1000);if(d<60)return d+' 秒前';if(d<3600)return Math.floor(d/60)+' 分鐘前';if(d<86400)return Math.floor(d/3600)+' 小時前';return Math.floor(d/86400)+' 天前';}
+function fmtAbs(iso){const d=new Date(iso);return isNaN(d)?'—':d.toLocaleString('zh-TW',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});}
+function renderOverview(){
+ const d=DATA;document.getElementById('nsVal').textContent=d.north_star?.value??'—';document.getElementById('nsLab').textContent=d.north_star?.label??'';document.getElementById('nsMeta').textContent=d.north_star?.meta??'';
+ document.getElementById('metrics').innerHTML=(d.metrics||[]).map(m=>`<div class="cell${m.ember?' ember':''}"><div class="lab">${esc(m.lab)}</div><div class="num">${esc(m.num)}</div><div class="sub">${esc(m.sub||'')}</div><div class="tr ${m.tr||'flat'}">${m.tr==='up'?'▲':m.tr==='down'?'▼':'—'}</div></div>`).join('');
+ const f=d.funnel||{};document.getElementById('funnel').innerHTML=`<div class="fl"><div class="fstep"><div class="fv" style="color:var(--gold)">${f.matches??'—'}</div><div class="fk">配對成功 · 7D</div></div><div class="fbar"></div><div class="fstep"><div class="fv" style="color:var(--ember)">${f.deposits??'—'}</div><div class="fk">雙方成交 · 7D</div></div><div class="frate">CVR ${f.rate||'—'}</div></div><div class="fnote">約 ${f.matches??'—'} 次配對僅 ${f.deposits??'—'} 次雙方付款成交 — 當前最大漏斗破口。</div>`;
+ document.getElementById('today').innerHTML=(d.today||[]).map(x=>`<div class="card s-doing"><div class="ct">${esc(x.t)}</div><div class="bdg"><span class="b team">${esc(x.r||'')}</span></div></div>`).join('')||'<div class="empty">今日無排定重點。</div>';
+ document.getElementById('updAbs').textContent=fmtAbs(d.generated_at);document.getElementById('updRel').textContent=relTime(d.generated_at);
+ document.getElementById('fSrc').textContent='SOURCE · '+(d.source||'—');document.getElementById('fGen').textContent='GEN · '+(d.generated_at||'—');
+ const age=(Date.now()-new Date(d.generated_at).getTime())/3600000,dot=document.getElementById('dot'),tx=document.getElementById('freshTxt');
+ if(isNaN(age)){dot.className='dot dead';tx.textContent='無資料';}else if(age<26){dot.className='dot fresh';tx.textContent='LIVE';}else{dot.className='dot stale';tx.textContent='待更新';}
+}
+/* ---- task/goal cards ---- */
+function taskCard(it){const d=document.createElement('div');d.className='card s-'+(it.s||'todo');
+ let b=`<span class="b st st-${it.s||'todo'}">${SL[it.s]||'待辦'}</span>`;
+ if(it.cat)b+=`<span class="b cat ${it.cat==='bug'?'bug':it.cat==='dept'?'dept':''}">${CAT[it.cat]||it.cat}</span>`;
+ if(it.team)b+=`<span class="b team">${esc(it.team)}</span>`;
+ if(it.prio==='urgent')b+=`<span class="b pri-urgent">緊急</span>`;if(it.prio==='high')b+=`<span class="b pri-high">高</span>`;
+ let m='';if(it.owner)m+=`<span><b>負責</b> ${esc(it.owner)}</span>`;if(it.due)m+=`<span><b>期限</b> ${esc(it.due)}</span>`;if(it.src)m+=`<span><b>來源</b> ${esc(it.src)}</span>`;
+ d.innerHTML=`<div class="acts"><button class="ib">✎</button><button class="ib">✕</button></div><div class="ct">${esc(it.t)}</div><div class="bdg">${b}</div>${m?`<div class="meta">${m}</div>`:''}${it.note?`<div class="note">${esc(it.note)}</div>`:''}`;
+ const[e,x]=d.querySelectorAll('.ib');e.onclick=()=>openEd(curList(),it.id);x.onclick=()=>{if(confirm('刪除？')){BOARD[curList()]=BOARD[curList()].filter(z=>z.id!==it.id);saveBoard();renderAll();}};return d;}
+function curList(){return cur==='goals'?'goals':'tasks';}
+function renderTasks(){document.getElementById('tasks').innerHTML='';const c=document.getElementById('tasks');if(!BOARD.tasks.length)c.innerHTML='<div class="empty">尚無任務，點「+ 新增任務」或從待審清單採納。</div>';else BOARD.tasks.forEach(it=>c.appendChild(taskCard(it)));renderInbox();}
+function renderGoals(){const c=document.getElementById('goals');c.innerHTML='';if(!BOARD.goals.length)c.innerHTML='<div class="empty">尚無目標。</div>';else BOARD.goals.forEach(it=>c.appendChild(taskCard(it)));}
+/* ---- inbox ---- */
+function notHandled(it){return !BOARD.accepted.includes(it.id)&&!BOARD.dismissed.includes(it.id);}
+function renderInbox(){const items=(INBOX.items||[]).filter(notHandled);const box=document.getElementById('inboxBox');
+ if(!items.length){box.innerHTML='';return;}
+ box.innerHTML=`<div class="inbox"><div class="ih"><span class="t">📥 待審清單</span><span class="c">由會議記錄 + ClickUp 頻道自動判別 · ${esc(INBOX.generated_at?relTime(INBOX.generated_at):'')}</span></div><div class="id">AI 偵測到下列可能的任務 / Bug / 他部門事項，核准才會進任務看板。</div>${items.map(it=>`<div class="irow" data-id="${it.id}"><div class="it"><div class="itt">${esc(it.title)}</div><div class="im">${CAT[it.cat]||it.cat} · ${esc(it.src||'')} · ${esc(it.date||'')}</div></div><div class="ia"><button class="acc">✓ 採納</button><button class="dis">✕ 略過</button></div></div>`).join('')}</div>`;
+ box.querySelectorAll('.irow').forEach(row=>{const id=row.dataset.id;const it=items.find(x=>x.id===id);
+  row.querySelector('.acc').onclick=()=>{BOARD.tasks.unshift({id:uid('t'),t:it.title,s:'todo',cat:it.cat,src:it.src,prio:it.cat==='bug'?'high':''});BOARD.accepted.push(id);saveBoard();renderAll();};
+  row.querySelector('.dis').onclick=()=>{BOARD.dismissed.push(id);saveBoard();renderAll();};});}
+/* ---- agenda ---- */
+function renderAgenda(){const c=document.getElementById('agenda');c.innerHTML='';let tot=0;
+ BOARD.agenda.forEach((a,i)=>{tot+=parseInt(a.mins)||0;const e=document.createElement('div');e.className='agitem';
+  e.innerHTML=`<div class="agn">${i+1}</div><div class="agm"><div class="agt">${esc(a.topic)}</div><div class="ags">${a.owner?`<span>👤 ${esc(a.owner)}</span>`:''}${a.mins?`<span>⏱ ${esc(a.mins)} 分</span>`:''}</div>${a.note?`<div class="agnote">${esc(a.note)}</div>`:''}</div><div class="acts"><button class="ib">✎</button><button class="ib">✕</button></div>`;
+  const[ed,x]=e.querySelectorAll('.ib');ed.onclick=()=>openEd('agenda',a.id);x.onclick=()=>{if(confirm('刪除議程？')){BOARD.agenda=BOARD.agenda.filter(z=>z.id!==a.id);saveBoard();renderAgenda();}};c.appendChild(e);});
+ if(!BOARD.agenda.length)c.innerHTML='<div class="empty">尚無議程。</div>';}
+function renderAll(){renderTabs();renderOverview();renderTasks();renderGoals();renderAgenda();}
+
+/* ---- editor ---- */
+const F={tasks:[['t','標題','text'],['s','狀態','status'],['cat','分類','sel:,task,bug,dept'],['team','團隊','text'],['prio','優先','sel:,urgent,high,normal,low'],['owner','負責人','text'],['due','期限','text'],['note','備註','area']],
+ goals:[['t','目標','text'],['s','狀態','status'],['note','備註','area']],
+ agenda:[['topic','議題','text'],['owner','負責','text'],['mins','分鐘','text'],['note','說明','area']]};
+let edx=null;
+function openEd(list,id){edx={list,id};const def=F[list];const item=id?BOARD[list].find(x=>x.id===id):{};
+ document.getElementById('mTitle').textContent=(id?'編輯':'新增');document.getElementById('bDel').style.display=id?'':'none';
+ document.getElementById('mBody').innerHTML=def.map(([k,lab,t])=>{let v=item?item[k]:'';
+  if(t==='area')return `<div class="fld"><label>${lab}</label><textarea id="e_${k}">${esc(v||'')}</textarea></div>`;
+  if(t==='status')return `<div class="fld"><label>${lab}</label><select id="e_${k}">${Object.keys(SL).map(o=>`<option value="${o}"${v===o?' selected':''}>${SL[o]}</option>`).join('')}</select></div>`;
+  if(t.startsWith('sel:')){const opts=t.slice(4).split(',');return `<div class="fld"><label>${lab}</label><select id="e_${k}">${opts.map(o=>`<option value="${o}"${v===o?' selected':''}>${o===''?'（無）':(CAT[o]||o)}</option>`).join('')}</select></div>`;}
+  return `<div class="fld"><label>${lab}</label><input id="e_${k}" value="${esc(v||'')}"></div>`;}).join('');
+ document.getElementById('mb').classList.add('open');}
+function closeMb(){document.getElementById('mb').classList.remove('open');edx=null;}
+function saveEd(){if(!edx)return;const{list,id}=edx;const o=id?BOARD[list].find(x=>x.id===id):{id:uid(list[0])};
+ F[list].forEach(([k])=>{const el=document.getElementById('e_'+k);if(el)o[k]=el.value;});
+ if((list==='tasks'||list==='goals')&&!o.s)o.s='todo';if(!id)BOARD[list].push(o);saveBoard();closeMb();renderAll();}
+function delEd(){if(!edx||!edx.id)return;if(confirm('刪除？')){BOARD[edx.list]=BOARD[edx.list].filter(x=>x.id!==edx.id);saveBoard();closeMb();renderAll();}}
+
+/* ---- sync (GitHub Contents API) ---- */
+function setSyncState(t){document.getElementById('syncState').textContent=t;}
+function openSync(){edx=null;document.getElementById('mTitle').textContent='同步設定 · GitHub';document.getElementById('bDel').style.display='none';
+ document.getElementById('mBody').innerHTML=`<div class="hint">「同步雲端」會把你的任務/目標/agenda 寫成 repo 裡的 <b>board.json</b>，讓不同裝置一致。需要一個 GitHub <b>fine-grained token</b>（只授權這個 repo 的 Contents 讀寫）。Token 只存在這台裝置的瀏覽器，不會寫進公開頁面。</div>
+  <div class="fld"><label>GitHub 帳號 (owner)</label><input id="s_owner" value="${esc(SYNC.owner)}" placeholder="your-github-id"></div>
+  <div class="fld"><label>Repo 名稱</label><input id="s_repo" value="${esc(SYNC.repo)}" placeholder="lava-dashboard"></div>
+  <div class="fld"><label>Branch</label><input id="s_branch" value="${esc(SYNC.branch||'main')}"></div>
+  <div class="fld"><label>Token (ghp_/github_pat_…)</label><input id="s_token" type="password" value="${esc(SYNC.token)}" placeholder="貼上 fine-grained token"></div>`;
+ const mf=document.querySelector('.mf');mf.style.display='flex';document.getElementById('bDel').style.display='none';
+ // override save to store sync
+ document.querySelector('.save').onclick=()=>{SYNC={owner:v('s_owner'),repo:v('s_repo'),branch:v('s_branch')||'main',token:v('s_token')};saveSync();closeMb();document.querySelector('.save').onclick=saveEd;setSyncState(SYNC.token?'已設定同步':'本機暫存');};
+ document.getElementById('mb').classList.add('open');}
+function v(id){const e=document.getElementById(id);return e?e.value.trim():'';}
+function b64(str){return btoa(unescape(encodeURIComponent(str)));}
+function payload(){return JSON.stringify({tasks:BOARD.tasks,goals:BOARD.goals,agenda:BOARD.agenda,accepted:BOARD.accepted,dismissed:BOARD.dismissed,updatedAt:new Date().toISOString()},null,2);}
+async function syncUp(){if(!SYNC.token||!SYNC.owner||!SYNC.repo){openSync();return;}
+ setSyncState('同步中…');const api=`https://api.github.com/repos/${SYNC.owner}/${SYNC.repo}/contents/board.json`;
+ try{let sha=null;const g=await fetch(api+'?ref='+SYNC.branch,{headers:{Authorization:'Bearer '+SYNC.token}});if(g.ok)sha=(await g.json()).sha;
+  const r=await fetch(api,{method:'PUT',headers:{Authorization:'Bearer '+SYNC.token,'Content-Type':'application/json'},body:JSON.stringify({message:'update board.json',content:b64(payload()),branch:SYNC.branch,sha:sha||undefined})});
+  if(r.ok)setSyncState('✓ 已同步雲端 · '+new Date().toLocaleTimeString('zh-TW'));else{const e=await r.json();setSyncState('同步失敗：'+(e.message||r.status));}
+ }catch(e){setSyncState('同步失敗（網路或權限）');}}
+async function syncDown(){if(!confirm('從雲端 board.json 覆蓋本機編輯？'))return;
+ try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已從雲端載入');}catch(e){setSyncState('雲端尚無 board.json');}}
+function exportLocal(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([payload()],{type:'application/json'}));a.download='board_backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();}
+
+/* ---- live data ---- */
+async function loadData(){
+ try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});DATA=r.ok?await r.json():SEED_DATA;}catch(e){DATA=SEED_DATA;}
+ try{const r=await fetch('inbox.json?t='+Date.now(),{cache:'no-store'});INBOX=r.ok?await r.json():SEED_INBOX;}catch(e){INBOX=SEED_INBOX;}
+ renderAll();}
+let started=false;
+function start(){if(started)return;started=true;loadBoard();loadSync();setSyncState(SYNC.token?'已設定同步':'本機暫存');loadData();setInterval(loadData,60000);}
+document.getElementById('mb').addEventListener('click',e=>{if(e.target.id==='mb')closeMb();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMb();});
+</script>
+</body>
+</html>
