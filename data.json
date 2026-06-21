@@ -1,19 +1,67 @@
 {
-  "generated_at": "2026-06-17T17:37:00+08:00",
-  "source": "PostHog 98614（手動更新）",
-  "north_star": { "label": "累計碰面組數", "value": "66", "meta": "NORTH STAR · 每月成功完成的約會（deposit_both 全期累計）" },
+  "generated_at": "2026-06-21T15:56:15+08:00",
+  "source": "PostHog 98614（自動更新）",
+  "north_star": {
+    "label": "累計碰面組數",
+    "value": "66",
+    "meta": "NORTH STAR · 每月成功完成的約會（deposit_both 全期累計）"
+  },
   "metrics": [
-    { "lab": "WAU 週活躍", "num": "1,026", "sub": "$SCREEN WEEKLY ACTIVE · 6/16", "tr": "flat" },
-    { "lab": "MAU 月活躍", "num": "2,320", "sub": "目標 5,000（一個月前 2,176）", "tr": "up" },
-    { "lab": "本週配對成功", "num": "212", "sub": "MATCH_SUCCESS · 近 7 日", "tr": "flat" },
-    { "lab": "本週雙方成交", "num": "4", "sub": "DEPOSIT_BOTH · 近 7 日 · 漏斗破口", "tr": "down", "ember": true },
-    { "lab": "男 / 女", "num": "76/17", "sub": "GENDER SPLIT %", "tr": "down" },
-    { "lab": "D7 留存", "num": "43.4%", "sub": "目標 > 30%", "tr": "flat" }
+    {
+      "lab": "WAU 週活躍",
+      "num": "993",
+      "sub": "$SCREEN WEEKLY ACTIVE · 6/20（高點後回落）",
+      "tr": "down"
+    },
+    {
+      "lab": "MAU 月活躍",
+      "num": "2,350",
+      "sub": "目標 5,000（一個月前 2,176）",
+      "tr": "up"
+    },
+    {
+      "lab": "本週配對成功",
+      "num": "119",
+      "sub": "MATCH_SUCCESS · 近 7 日",
+      "tr": "down"
+    },
+    {
+      "lab": "本週雙方成交",
+      "num": "0",
+      "sub": "DEPOSIT_BOTH · 近 7 日 · ⚠️ 連 2 週掛 0",
+      "tr": "down",
+      "ember": true
+    },
+    {
+      "lab": "男 / 女",
+      "num": "76/17",
+      "sub": "GENDER SPLIT %",
+      "tr": "down"
+    },
+    {
+      "lab": "D7 留存",
+      "num": "43.4%",
+      "sub": "目標 > 30%",
+      "tr": "flat"
+    }
   ],
-  "funnel": { "matches": 212, "deposits": 4, "rate": "1.9%" },
+  "funnel": {
+    "matches": 119,
+    "deposits": 0,
+    "rate": "0%"
+  },
   "today": [
-    { "t": "Superlike PRD 定稿交 RD", "r": "PM" },
-    { "t": "校準 OKR / 北極星指標", "r": "CEO" },
-    { "t": "商家合作 final + 桃園夜更", "r": "BD" }
+    {
+      "t": "Superlike PRD 定稿交 RD",
+      "r": "PM"
+    },
+    {
+      "t": "校準 OKR / 北極星指標",
+      "r": "CEO"
+    },
+    {
+      "t": "商家合作 final + 桃園夜更",
+      "r": "BD"
+    }
   ]
 }
