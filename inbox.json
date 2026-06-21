@@ -1,21 +1,146 @@
 {
-  "generated_at": "2026-06-21T15:18:00+08:00",
-  "source": "Drive · 6/17 會議記錄 + ClickUp Bugs Report",
+  "generated_at": "2026-06-21T15:43:02+08:00",
+  "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
-    { "id": "ib_617_1", "title": "Bug：配對狀態不一致（一方顯示配對失效、另一方顯示即將見面）", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_2", "title": "Bug：連續送出兩個邀約時會出錯", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_3", "title": "Bug：後台 QR Code 出席狀態無法手動調整", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_4", "title": "Bug：刪除好友 edge case 導致「即將見面」配對失效", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_5", "title": "發起/接受邀約畫面新增退款說明文字（Jesse 給文字 → Miiia）", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_6", "title": "取消配對通知流程：即時推播 → 1hr 退款完成 → 自動 email", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_7", "title": "KYC 部署正式環境 + 每日審核流程", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
-    { "id": "ib_617_8", "title": "研究延遲付款授權 pre-auth API 是否可行", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
-    { "id": "ib_617_9", "title": "後台 Meeting 列表最外層新增商家資訊欄位", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
-    { "id": "ib_617_10", "title": "通知發送歷史紀錄（時間與次數）", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
-    { "id": "ib_617_11", "title": "重置 Lava Points", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_12", "title": "確認三封系統信是否正常送出", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_13", "title": "Meta 廣告預算優先女性受眾（Wayne）", "cat": "dept", "src": "Drive · 6/17 會議 · MKT", "date": "6/17" },
-    { "id": "ib_617_14", "title": "板橋兩間店進度確認後通知行銷團隊啟動在地招募", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
-    { "id": "ib_617_15", "title": "與 SitDown 溝通拍攝餐點費用分擔（要求流量數據）", "cat": "task", "src": "Drive · 6/17 會議 · MKT", "date": "6/17" }
+    {
+      "id": "ib_1782027782051",
+      "title": "修復 Lava Point 全額折抵無法付款",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782027782052",
+      "title": "修復點通知後教學被重置、卡牌異常",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782027782053",
+      "title": "修復無法進入設定卡牌頁面、流程中斷",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_178184384793600",
+      "title": "安排新北、桃園店家拜訪並盡快上線",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "6/19"
+    },
+    {
+      "id": "ib_178184384793601",
+      "title": "修復連續送出兩個邀約的 Bug",
+      "cat": "bug",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793602",
+      "title": "修復後台 QR Code 出席狀態無法手動調整",
+      "cat": "bug",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793603",
+      "title": "修正 Half Check 取消場次誤顯示未出席",
+      "cat": "bug",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793604",
+      "title": "修復配對雙方畫面狀態不一致",
+      "cat": "bug",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793605",
+      "title": "部署 KYC 更新至正式環境",
+      "cat": "dept",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793606",
+      "title": "追蹤 Apple Enterprise Program 申請進度",
+      "cat": "dept",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793607",
+      "title": "確認取消約會原因顯示邏輯並補說明",
+      "cat": "dept",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793608",
+      "title": "確認關鍵字封鎖清單並交 RD",
+      "cat": "dept",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793609",
+      "title": "在邀約畫面新增退款機制說明文字",
+      "cat": "task",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793610",
+      "title": "實作取消後退款通知流程（推播＋Email）",
+      "cat": "task",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793611",
+      "title": "研究延遲付款授權 API 可行性",
+      "cat": "task",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793612",
+      "title": "排程開發同性別配對篩選功能",
+      "cat": "task",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793613",
+      "title": "上線週末約會選項（定價暫同平日）",
+      "cat": "task",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_178184384793614",
+      "title": "優先開發每週活動功能再接 Super Like",
+      "cat": "task",
+      "src": "Drive · 6/17 會議",
+      "date": "6/17"
+    },
+    {
+      "id": "ib_seed2",
+      "title": "詐騙帳號被 ban 後可用原手機/email 重新註冊？需擋",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "6/11"
+    },
+    {
+      "id": "ib_seed1",
+      "title": "通知顯示「約會在 12 天後」但用戶根本沒有約會",
+      "cat": "bug",
+      "src": "ClickUp · Lava 頻道",
+      "date": "6/9"
+    }
   ]
 }
