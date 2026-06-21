@@ -361,7 +361,8 @@ async function fetchJSON(url){const c=new AbortController();const t=setTimeout((
  try{const r=await fetch(url+'?t='+Date.now(),{cache:'no-store',signal:c.signal});clearTimeout(t);if(!r.ok)return null;return await r.json();}catch(e){clearTimeout(t);return null;}}
 async function loadData(){const d=await fetchJSON('data.json');if(d)DATA=d;const ib=await fetchJSON('inbox.json');if(ib)INBOX=ib;renderSafe();}
 let started=false;
-function start(){if(started)return;started=true;loadBoard();loadSync();setSyncState(SYNC.token?'已設定同步':'本機暫存');DATA=SEED_DATA;INBOX=SEED_INBOX;renderSafe();loadData();setInterval(loadData,60000);}
+async function autoPullBoard(){try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();const lu=(BOARD&&BOARD.updatedAt)?Date.parse(BOARD.updatedAt):0;const cu=d.updatedAt?Date.parse(d.updatedAt):0;if(cu>lu){BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已載入雲端最新看板');}}catch(e){}}
+function start(){if(started)return;started=true;loadBoard();loadSync();setSyncState(SYNC.token?'已設定同步':'本機暫存');DATA=SEED_DATA;INBOX=SEED_INBOX;renderSafe();loadData();autoPullBoard();setInterval(loadData,60000);}
 window.onerror=function(m,s,l){showErr((m||'錯誤')+' @line '+(l||'?'));};
 document.getElementById('mb').addEventListener('click',e=>{if(e.target.id==='mb')closeMb();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMb();});
