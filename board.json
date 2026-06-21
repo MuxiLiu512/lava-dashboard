@@ -2,39 +2,47 @@
   "tasks": [
     {
       "id": "t1",
-      "t": "Superlike PRD / Spec 定稿",
+      "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）",
       "s": "doing",
       "team": "產品",
-      "prio": "urgent",
+      "prio": "high",
       "owner": "Jesse",
-      "due": "6/18"
+      "due": "6/24"
     },
     {
       "id": "t2",
-      "t": "客製化約會 PRD + 收費方式 + prototype",
+      "t": "板橋兩間店 final + 通知行銷啟動在地招募",
       "s": "doing",
-      "team": "產品",
+      "team": "BD",
       "prio": "urgent",
       "owner": "Jesse",
       "due": "6/24"
     },
     {
       "id": "t3",
-      "t": "商家合作 final + 前置作業",
+      "t": "每週活動功能頁面驗收 + 瑜珈/跑團排期",
       "s": "doing",
-      "team": "BD",
-      "prio": "urgent",
+      "team": "活動",
+      "prio": "high",
       "owner": "Jesse+WY",
-      "due": "6/19"
+      "due": "6/24"
     },
     {
       "id": "t4",
-      "t": "PostHog 追蹤稽核（match→deposit 破口）",
-      "s": "todo",
-      "team": "數據",
+      "t": "拓店 6 區：台北/新北/桃園/台中/台南/高雄",
+      "s": "doing",
+      "team": "BD",
       "prio": "high",
       "owner": "Jesse",
-      "due": "6/22"
+      "due": "7月"
+    },
+    {
+      "id": "t5",
+      "t": "與 SitDown 溝通拍攝餐點費用分擔",
+      "s": "todo",
+      "team": "行銷",
+      "prio": "normal",
+      "owner": "Cookie"
     }
   ],
   "goals": [
@@ -42,61 +50,116 @@
       "id": "g1",
       "t": "女性用戶占比 → 50%",
       "s": "doing",
-      "note": "目前 ~17%，核心增長缺口"
+      "note": "現 23%（自 17% 提升）；仍為核心增長缺口"
     },
     {
       "id": "g2",
-      "t": "WAU → 3,000 / MAU → 5,000",
+      "t": "提升 配對 → 碰面 轉換",
       "s": "doing",
-      "note": "實際 WAU ~1,025"
+      "note": "⚠️ 本週成交 0；Super Like 主要目標之一"
     },
     {
       "id": "g3",
+      "t": "WAU → 3,000 / MAU → 5,000",
+      "s": "doing",
+      "note": "WAU ~993、MAU 2,350"
+    },
+    {
+      "id": "g4",
       "t": "每月成功完成約會場次（北極星）",
       "s": "doing",
-      "note": "累計碰面破 50"
+      "note": "累計 66，近 2 週停滯"
     }
   ],
   "agenda": [
     {
       "id": "a1",
-      "topic": "Superlike PRD + Sprint planning",
-      "owner": "Jesse",
-      "mins": "20",
-      "note": ""
+      "topic": "進度 alignment & recap",
+      "owner": "全員",
+      "mins": "15",
+      "note": "【自 6/17 週會以來：待交付／近 ddl 項目盤點】\n1) KYC 正式環境部署：6/17 為『測試中、PM 測完即上線』→ 確認是否已上線，並啟動每日真人審核（WY／Jesse／Cookie）。\n2) 退款 UX：Jesse 給退款說明文字串 → Miiia 加到付款／邀約畫面；取消通知流程（即時推播 → 1hr 退款完成 → 自動 email）是否實作。退款政策已由『7 天前退 100%』改為『5 天前退』，前端文字需同步。\n3) 同性別配對篩選：6/17 已決議通過並列入排程（RD 稱可即刻上線）→ 確認排期／是否已上。\n4) 週末約會上線：已決議先開放、定價暫同平日、前端加未來調價說明 → 確認上線狀態。\n5) 每週活動功能（瑜珈／跑團）：優先於 Super Like、預估 2–3 天 → 確認頁面驗收進度。\n6) Super Like：pre-auth／0 元刷卡技術問題待解；押金機制（方案 B）暫緩，先上補償方案 A。\n7) 關鍵字封鎖清單：WeiYin 確認後交 RD → 是否已交付。\n8) 後台／Half Check：QR Code 出席狀態手動調整（bug）、Meeting 列表最外層加商家資訊、通知發送歷史紀錄。\n9) Apple Enterprise Program／Halftrack：申請卡關 → 持續追蹤。\n10) 拓店：板橋兩間本週 final → 通知行銷啟動在地招募；6 區（北／新北／桃園／中／南／高）推進。\n11) 行銷：Meta 預算優先女性受眾；KOC『認識陌生人系列』合作上下兩集。\n⚠️ 最關鍵：雙方成交（deposit_both）已連 2 週掛 0（6/14、6/21 週），但配對仍健康（~119/週、~16/日）——match→deposit 漏斗破口為當前第一優先，本次須對齊負責人與行動。"
     },
     {
       "id": "a2",
-      "topic": "同性別篩選 / 週末上線 / 租辦公室 / 自動化",
-      "owner": "全員",
-      "mins": "25",
-      "note": "同性別篩選：是否即刻上線\n週末時段上線：何時可以上線\n租辦公室：租不租辦公室\n自動化：有哪些 workflow 可以自動化"
+      "topic": "雙方成交漏斗破口檢討（deposit_both 連 2 週掛 0）",
+      "owner": "CEO/RD",
+      "mins": "20",
+      "note": "配對健康（~119/週、~16/日）但成交連 2 週為 0。拆解 match→deposit 各步驟，定位流失點（付款 bug？流程信任？金額？），當場指派負責人與行動。"
     },
     {
-      "id": "a_mqhwtagqe7b",
-      "topic": "發現問題：用戶流出 > 流入",
-      "owner": "",
-      "mins": "15 ",
-      "note": ""
+      "id": "a3",
+      "topic": "6/21 付款相關 Bug 處理",
+      "owner": "RD",
+      "mins": "10",
+      "note": "① Lava Point 全額折抵無法付款（疑似 0 元刷卡問題）② 點通知進入後教學被重置／異常出現卡牌 ③ 進不到設定卡牌頁面、流程走不完。"
     },
     {
-      "id": "a_mqhwxn86jwc",
-      "topic": "HalfCheck 流程說明、需求提出",
-      "owner": "",
+      "id": "a4",
+      "topic": "KYC 上線狀態 + 每日真人審核啟動",
+      "owner": "Stan/PM",
+      "mins": "10",
+      "note": "6/17 為測試中、PM 測完即上線；確認是否已上線並啟動每日審核。"
+    },
+    {
+      "id": "a5",
+      "topic": "週末約會／每週活動／同性別篩選 上線排程",
+      "owner": "PM/RD",
       "mins": "15",
-      "note": ""
+      "note": "三項 6/17 已決議，確認排期與上線狀態；每週活動（瑜珈/跑團）頁面驗收。"
     },
     {
-      "id": "a_mqhx3lnehbr",
-      "topic": "Clickup Task / Bug 流程",
-      "owner": "全員",
-      "mins": "15",
-      "note": ""
+      "id": "a6",
+      "topic": "拓店與行銷對齊",
+      "owner": "Jesse/MKT",
+      "mins": "10",
+      "note": "板橋兩間 final → 通知行銷啟動在地招募；Meta 預算優先女性受眾；KOC『認識陌生人系列』上下兩集。"
+    }
+  ],
+  "discuss": [
+    {
+      "id": "d1",
+      "t": "接收方 0 元刷卡技術問題如何解？",
+      "s": "plan",
+      "owner": "RD",
+      "note": "Super Like 以 Coupon 邏輯實作；0 元刷卡目前技術有問題"
+    },
+    {
+      "id": "d2",
+      "t": "延遲付款授權 pre-auth API 是否可行？",
+      "s": "plan",
+      "owner": "Stan",
+      "note": "發起時授權最低金額、對方回覆後扣款；解 Super Like 與週末/客製化金流衝突"
+    },
+    {
+      "id": "d3",
+      "t": "Super Like 押金機制 B 是否加入？",
+      "s": "plan",
+      "owner": "PM",
+      "note": "先上補償方案 A，監測放鴿率後再決定押金"
+    },
+    {
+      "id": "d4",
+      "t": "本週成交 0、配對→碰面轉換過低，如何提升？",
+      "s": "plan",
+      "owner": "CEO",
+      "note": "Super Like 是否足夠？需配套"
+    },
+    {
+      "id": "d5",
+      "t": "Apple Enterprise Program 申請卡關",
+      "s": "plan",
+      "owner": "Stan",
+      "note": "持續追蹤 Halftrack / Apple Enterprise"
+    },
+    {
+      "id": "d6",
+      "t": "女性下載率偏低（App 名稱「不聊天的交友軟體」卻步）",
+      "s": "plan",
+      "owner": "MKT",
+      "note": "女性 CTR 為男性 2 倍但下載率僅 1/3"
     }
   ],
   "accepted": [],
-  "dismissed": [
-    "ib_seed1"
-  ],
-  "updatedAt": "2026-06-21T08:13:17.868Z"
+  "dismissed": [],
+  "updatedAt": "2026-06-21T16:22:41+08:00"
 }
