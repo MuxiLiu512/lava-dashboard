@@ -1,0 +1,100 @@
+{
+  "tasks": [
+    {
+      "id": "t1",
+      "t": "Superlike PRD / Spec 定稿",
+      "s": "doing",
+      "team": "產品",
+      "prio": "urgent",
+      "owner": "Jesse",
+      "due": "6/18"
+    },
+    {
+      "id": "t2",
+      "t": "客製化約會 PRD + 收費方式 + prototype",
+      "s": "doing",
+      "team": "產品",
+      "prio": "urgent",
+      "owner": "Jesse",
+      "due": "6/24"
+    },
+    {
+      "id": "t3",
+      "t": "商家合作 final + 前置作業",
+      "s": "doing",
+      "team": "BD",
+      "prio": "urgent",
+      "owner": "Jesse+WY",
+      "due": "6/19"
+    },
+    {
+      "id": "t4",
+      "t": "PostHog 追蹤稽核（match→deposit 破口）",
+      "s": "todo",
+      "team": "數據",
+      "prio": "high",
+      "owner": "Jesse",
+      "due": "6/22"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g1",
+      "t": "女性用戶占比 → 50%",
+      "s": "doing",
+      "note": "目前 ~17%，核心增長缺口"
+    },
+    {
+      "id": "g2",
+      "t": "WAU → 3,000 / MAU → 5,000",
+      "s": "doing",
+      "note": "實際 WAU ~1,025"
+    },
+    {
+      "id": "g3",
+      "t": "每月成功完成約會場次（北極星）",
+      "s": "doing",
+      "note": "累計碰面破 50"
+    }
+  ],
+  "agenda": [
+    {
+      "id": "a1",
+      "topic": "Superlike PRD + Sprint planning",
+      "owner": "Jesse",
+      "mins": "20",
+      "note": ""
+    },
+    {
+      "id": "a2",
+      "topic": "同性別篩選 / 週末上線 / 租辦公室 / 自動化",
+      "owner": "全員",
+      "mins": "25",
+      "note": "同性別篩選：是否即刻上線\n週末時段上線：何時可以上線\n租辦公室：租不租辦公室\n自動化：有哪些 workflow 可以自動化"
+    },
+    {
+      "id": "a_mqhwtagqe7b",
+      "topic": "發現問題：用戶流出 > 流入",
+      "owner": "",
+      "mins": "15 ",
+      "note": ""
+    },
+    {
+      "id": "a_mqhwxn86jwc",
+      "topic": "HalfCheck 流程說明、需求提出",
+      "owner": "",
+      "mins": "15",
+      "note": ""
+    },
+    {
+      "id": "a_mqhx3lnehbr",
+      "topic": "Clickup Task / Bug 流程",
+      "owner": "全員",
+      "mins": "15",
+      "note": ""
+    }
+  ],
+  "accepted": [],
+  "dismissed": [],
+  "updatedAt": "2026-06-21T08:12:25.181Z"
+}
