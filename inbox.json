@@ -1,10 +1,21 @@
 {
-  "generated_at": "2026-06-17T08:10:00+08:00",
-  "source": "ClickUp 頻道 + Google Drive 會議記錄（種子範例）",
+  "generated_at": "2026-06-21T15:18:00+08:00",
+  "source": "Drive · 6/17 會議記錄 + ClickUp Bugs Report",
   "items": [
-    { "id": "ib_seed1", "title": "通知顯示「約會在 12 天後」但用戶根本沒有約會", "cat": "bug", "src": "ClickUp · Lava 頻道", "date": "6/9" },
-    { "id": "ib_seed2", "title": "詐騙帳號被 ban 後可用原手機/email 重新註冊？需擋", "cat": "task", "src": "ClickUp · Lava 頻道", "date": "6/11" },
-    { "id": "ib_seed3", "title": "店家 enterprise 版 Half Check 上線時間？", "cat": "dept", "src": "ClickUp · Lava 頻道", "date": "6/9" },
-    { "id": "ib_seed4", "title": "Google Sheet 串接何時可用（海巡/場次資料源）", "cat": "task", "src": "ClickUp · Lava 頻道", "date": "6/8" }
+    { "id": "ib_617_1", "title": "Bug：配對狀態不一致（一方顯示配對失效、另一方顯示即將見面）", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_2", "title": "Bug：連續送出兩個邀約時會出錯", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_3", "title": "Bug：後台 QR Code 出席狀態無法手動調整", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_4", "title": "Bug：刪除好友 edge case 導致「即將見面」配對失效", "cat": "bug", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_5", "title": "發起/接受邀約畫面新增退款說明文字（Jesse 給文字 → Miiia）", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_6", "title": "取消配對通知流程：即時推播 → 1hr 退款完成 → 自動 email", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_7", "title": "KYC 部署正式環境 + 每日審核流程", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
+    { "id": "ib_617_8", "title": "研究延遲付款授權 pre-auth API 是否可行", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
+    { "id": "ib_617_9", "title": "後台 Meeting 列表最外層新增商家資訊欄位", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
+    { "id": "ib_617_10", "title": "通知發送歷史紀錄（時間與次數）", "cat": "dept", "src": "Drive · 6/17 會議 · RD", "date": "6/17" },
+    { "id": "ib_617_11", "title": "重置 Lava Points", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_12", "title": "確認三封系統信是否正常送出", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_13", "title": "Meta 廣告預算優先女性受眾（Wayne）", "cat": "dept", "src": "Drive · 6/17 會議 · MKT", "date": "6/17" },
+    { "id": "ib_617_14", "title": "板橋兩間店進度確認後通知行銷團隊啟動在地招募", "cat": "task", "src": "Drive · 6/17 會議", "date": "6/17" },
+    { "id": "ib_617_15", "title": "與 SitDown 溝通拍攝餐點費用分擔（要求流量數據）", "cat": "task", "src": "Drive · 6/17 會議 · MKT", "date": "6/17" }
   ]
 }
