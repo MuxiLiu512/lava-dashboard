@@ -1,7 +1,84 @@
 {
-  "generated_at": "2026-06-21T15:43:02+08:00",
+  "generated_at": "2026-06-23T18:48:52+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1782211732127",
+      "title": "製作配對曝光分布圖（抓近三週資料）",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732128",
+      "title": "整理 Meta 投放 Excel 並移至雲端硬碟",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732129",
+      "title": "修正 KYC 問題並完成後台審核中心設定",
+      "cat": "dept",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732130",
+      "title": "進行區域擴展分析",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732131",
+      "title": "安排拜訪仁愛路「你家樓下」店家談合作",
+      "cat": "dept",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732132",
+      "title": "將男女廣告素材拆成兩支獨立投放",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732133",
+      "title": "規劃並執行跳過價值觀問答 A/B Test",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732134",
+      "title": "完成 Lava Point 歷史紀錄 API 並上線",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732135",
+      "title": "確認 KOC 七月合作目標",
+      "cat": "dept",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732136",
+      "title": "修復被同一人重複鎖住的問題",
+      "cat": "bug",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
+    {
+      "id": "ib_1782211732137",
+      "title": "規劃 Profile 主題客製化付費功能（60元）",
+      "cat": "task",
+      "src": "Drive · 6/21 會議",
+      "date": "6/21"
+    },
     {
       "id": "ib_1782027782051",
       "title": "修復 Lava Point 全額折抵無法付款",
@@ -64,83 +141,6 @@
       "cat": "dept",
       "src": "Drive · 6/17 會議",
       "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793606",
-      "title": "追蹤 Apple Enterprise Program 申請進度",
-      "cat": "dept",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793607",
-      "title": "確認取消約會原因顯示邏輯並補說明",
-      "cat": "dept",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793608",
-      "title": "確認關鍵字封鎖清單並交 RD",
-      "cat": "dept",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793609",
-      "title": "在邀約畫面新增退款機制說明文字",
-      "cat": "task",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793610",
-      "title": "實作取消後退款通知流程（推播＋Email）",
-      "cat": "task",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793611",
-      "title": "研究延遲付款授權 API 可行性",
-      "cat": "task",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793612",
-      "title": "排程開發同性別配對篩選功能",
-      "cat": "task",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793613",
-      "title": "上線週末約會選項（定價暫同平日）",
-      "cat": "task",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_178184384793614",
-      "title": "優先開發每週活動功能再接 Super Like",
-      "cat": "task",
-      "src": "Drive · 6/17 會議",
-      "date": "6/17"
-    },
-    {
-      "id": "ib_seed2",
-      "title": "詐騙帳號被 ban 後可用原手機/email 重新註冊？需擋",
-      "cat": "task",
-      "src": "ClickUp · Lava 頻道",
-      "date": "6/11"
-    },
-    {
-      "id": "ib_seed1",
-      "title": "通知顯示「約會在 12 天後」但用戶根本沒有約會",
-      "cat": "bug",
-      "src": "ClickUp · Lava 頻道",
-      "date": "6/9"
     }
   ]
 }
