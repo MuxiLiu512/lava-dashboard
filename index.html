@@ -89,7 +89,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15p
 .fl7 .row:last-child{border-bottom:none}
 .fl7 .nm{width:84px;flex:none;font-size:13px;color:var(--ink2)}
 .fl7 .track{flex:1;min-width:60px;height:22px;background:var(--line2);border-radius:6px;overflow:hidden}
-.fl7 .bar{height:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold))}
+.fl7 .fbar7{height:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold))}
 .fl7 .vn{width:60px;flex:none;text-align:right;font-family:var(--disp);font-weight:500;font-size:18px}
 .fl7 .cv{width:92px;flex:none;font-family:var(--mono);font-size:12px;color:var(--ink2)}
 .fl7 .cv.bad{color:var(--ember-ink);font-weight:600}
@@ -133,6 +133,26 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15p
 .agn{width:30px;height:30px;border-radius:50%;background:var(--ember);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .agm{flex:1}.agt{font-size:15.5px;font-weight:600}.ags{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:3px;display:flex;gap:14px;flex-wrap:wrap}
 .agnote{font-size:13px;color:var(--ink2);margin-top:6px}
+/* STANDUP */
+.sucard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px}
+.suhd{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.sudate{font-family:var(--disp);font-size:20px;font-weight:600}
+.sumeta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.sublk{color:var(--ember-ink);font-weight:600}
+.suhd .acts{position:static;margin-left:auto;display:flex;gap:5px}
+.sunote{font-size:13px;color:var(--ink2);margin:0 0 12px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.supeople{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.superson{background:var(--panel2);border:1px solid var(--line2);border-radius:10px;padding:11px 13px}
+.supn{font-weight:700;font-size:14px;margin-bottom:7px;color:var(--ink)}
+.supf{font-size:13px;color:var(--ink2);line-height:1.5;display:flex;gap:8px;margin-top:4px}
+.supk{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;flex:none;width:32px;padding-top:2px}
+.supf.blk{color:var(--ember-ink)}.supf.blk .supk{color:var(--ember)}
+.suedit{border:1px solid var(--line);border-radius:10px;padding:11px;margin-bottom:9px;background:var(--panel2)}
+.suehd{display:flex;gap:8px;margin-bottom:2px}
+.suehd .sue_name{flex:1;padding:8px 10px;font-size:14px;font-weight:600;border:1px solid var(--line);border-radius:8px;background:#fff;font-family:inherit;color:var(--ink)}
+.suedit textarea{width:100%;padding:7px 10px;font-size:13.5px;border:1px solid var(--line);border-radius:8px;font-family:inherit;background:#fff;color:var(--ink);resize:vertical;min-height:36px;margin-top:6px}
+.suedit textarea:focus,.suehd .sue_name:focus{outline:none;border-color:var(--gold-soft)}
+.suehd .ib{flex:none}
 /* MODAL */
 .mb{position:fixed;inset:0;background:rgba(36,31,26,.4);display:none;align-items:center;justify-content:center;z-index:80;padding:20px}
 .mb.open{display:flex}
@@ -208,6 +228,11 @@ a{color:var(--ember-ink)}
     <div id="agenda"></div>
   </div>
 
+  <div class="page" id="p-standup">
+    <div class="head-row"><h2>每日站會</h2><button class="sbtn pri" onclick="openStandup()">+ 新增今日站會</button></div>
+    <div id="standup"></div>
+  </div>
+
   <div class="foot"><span id="fSrc">SOURCE · —</span><span>LAVA · fewer texts, better dates</span><span id="fGen">GEN · —</span></div>
 </div>
 
@@ -220,9 +245,9 @@ a{color:var(--ember-ink)}
 <script>
 const PW_HASH="74c0b9bfdc05e619ce48ffb4fab86e9fa6f7164af39e3a01fa8404efb502a353"; // sha256("lava2026")
 async function sha256(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
-async function tryGate(e){e.preventDefault();const h=await sha256(document.getElementById('pw').value);if(h===PW_HASH){sessionStorage.setItem('lava_ok','1');open_();}else document.getElementById('gerr').textContent='密碼錯誤';return false;}
+async function tryGate(e){e.preventDefault();const h=await sha256(document.getElementById('pw').value);if(h===PW_HASH){open_();}else document.getElementById('gerr').textContent='密碼錯誤';return false;}
 function open_(){document.getElementById('gate').classList.add('hidden');start();}
-if(sessionStorage.getItem('lava_ok')==='1')open_();
+/* 每次載入都需重新輸入密碼：刻意不記住登入狀態，重新整理會回到密碼頁 */
 
 const LSB='lava_board_v1', LSS='lava_sync_v1';
 const SL={doing:'進行中',todo:'待辦',plan:'待討論',block:'卡關',done:'完成',hold:'暫停'};
@@ -246,6 +271,13 @@ const DEF_BOARD={tasks:[
   {id:'a1',topic:'Superlike PRD + Sprint planning',owner:'Jesse',mins:'20',note:''},
   {id:'a2',topic:'同性別篩選 / 週末上線 / 租辦公室 / 自動化',owner:'全員',mins:'25',note:''}
  ],
+ standups:[
+  {id:'su_seed1',date:'2026-06-23',note:'重點：deposit_both 連 2 週掛 0，match→deposit 為本週第一優先。',people:[
+   {name:'Jesse',yest:'客製化約會 PRD 收費方式定稿；板橋兩店洽談',today:'退款說明文字交付 Miiia；每週活動頁面驗收',block:''},
+   {name:'RD',yest:'追 match→deposit 付款流程',today:'修 Lava Point 全額折抵 0 元刷卡 bug',block:'pre-auth／0 元刷卡技術未解，需與金流確認'},
+   {name:'Cookie',yest:'整理 Meta 投放數據',today:'男女素材拆成兩支獨立投放',block:''}
+  ]}
+ ],
  accepted:[],dismissed:[]};
 const SEED_INBOX={generated_at:"2026-06-17T08:10:00+08:00",items:[
   {id:'ib_seed1',title:'通知顯示「約會在 12 天後」但用戶根本沒有約會',cat:'bug',src:'ClickUp · Lava 頻道',date:'6/9'},
@@ -256,13 +288,13 @@ const SEED_INBOX={generated_at:"2026-06-17T08:10:00+08:00",items:[
 
 function clone(o){return JSON.parse(JSON.stringify(o));}
 function uid(p){return p+'_'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);}
-function loadBoard(){try{BOARD=JSON.parse(localStorage.getItem(LSB));}catch(e){}if(!BOARD)BOARD=clone(DEF_BOARD);['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);}
+function loadBoard(){try{BOARD=JSON.parse(localStorage.getItem(LSB));}catch(e){}if(!BOARD)BOARD=clone(DEF_BOARD);['tasks','goals','agenda','standups','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);}
 function saveBoard(){BOARD.updatedAt=new Date().toISOString();localStorage.setItem(LSB,JSON.stringify(BOARD));setSyncState('本機已存（未同步）');}
 function loadSync(){try{SYNC=JSON.parse(localStorage.getItem(LSS));}catch(e){}SYNC=SYNC||{owner:'',repo:'',branch:'main',token:''};}
 function saveSync(){localStorage.setItem(LSS,JSON.stringify(SYNC));}
 
 /* ---- tabs ---- */
-const TABS=[['overview','總覽'],['tasks','任務'],['goals','目標'],['agenda','Agenda']];
+const TABS=[['overview','總覽'],['tasks','任務'],['standup','站會'],['goals','目標'],['agenda','Agenda']];
 function renderTabs(){const b=document.getElementById('tabs');b.innerHTML='';const inboxN=(INBOX.items||[]).filter(notHandled).length;
  TABS.forEach(([id,l])=>{const e=document.createElement('div');e.className='tab'+(cur===id?' active':'');e.innerHTML=l+(id==='tasks'&&inboxN?` <span class="pill">${inboxN}</span>`:'');e.onclick=()=>{cur=id;document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('p-'+id).classList.add('active');renderTabs();};b.appendChild(e);});}
 let cur='overview';
@@ -271,11 +303,14 @@ let cur='overview';
 function esc(s){return(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function relTime(iso){const t=new Date(iso).getTime();if(isNaN(t))return'—';const d=Math.round((Date.now()-t)/1000);if(d<60)return d+' 秒前';if(d<3600)return Math.floor(d/60)+' 分鐘前';if(d<86400)return Math.floor(d/3600)+' 小時前';return Math.floor(d/86400)+' 天前';}
 function fmtAbs(iso){const d=new Date(iso);return isNaN(d)?'—':d.toLocaleString('zh-TW',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});}
+function freshInfo(iso){const t=new Date(iso).getTime();if(isNaN(t))return['','連線中…'];const h=(Date.now()-t)/3.6e6;if(h<26)return['fresh','指標即時更新'];if(h<72)return['stale','資料稍舊（>1 天）'];return['dead','資料停滯（>3 天）'];}
+function renderStamp(){const d=DATA||{},iso=d.generated_at;const ua=document.getElementById('updAbs'),ur=document.getElementById('updRel'),dot=document.getElementById('dot'),ft=document.getElementById('freshTxt'),fS=document.getElementById('fSrc'),fG=document.getElementById('fGen');if(ua)ua.textContent=fmtAbs(iso);if(ur)ur.textContent=relTime(iso);const[c,txt]=freshInfo(iso);if(dot)dot.className='dot'+(c?(' '+c):'');if(ft)ft.textContent=txt;if(fS)fS.textContent='SOURCE · '+(d.source||'—');if(fG)fG.textContent='GEN · '+fmtAbs(iso);}
 function renderOverview(){
+ renderStamp();
  const d=DATA;document.getElementById('nsVal').textContent=d.north_star?.value??'—';document.getElementById('nsLab').textContent=d.north_star?.label??'';document.getElementById('nsMeta').textContent=d.north_star?.meta??'';
  document.getElementById('metrics').innerHTML=(d.metrics||[]).map(m=>{const cmp=(m.cmp||[]).map(c=>`<span>${esc(c.l)} <b>${esc(c.v)}</b></span>`).join('');return `<div class="cell${m.ember?' ember':''}"><div class="lab">${esc(m.lab)}</div><div class="num">${esc(m.num)}</div><div class="sub">${esc(m.sub||'')}</div>${cmp?`<div class="cmp">${cmp}</div>`:''}<div class="tr ${m.tr||'flat'}">${m.tr==='up'?'▲':m.tr==='down'?'▼':'—'}</div></div>`;}).join('');
  const fs=d.funnel_stages||[];
- if(fs.length){const mx=Math.max.apply(null,fs.map(s=>s.v||0).concat([1]));document.getElementById('funnel').innerHTML=`<div class="fl7">`+fs.map(s=>{const w=Math.max(Math.round((s.v||0)/mx*100),1);const bad=(s.cvr==='0%');return `<div class="row"><div class="nm">${esc(s.k)}</div><div class="track"><div class="bar" style="width:${w}%"></div></div><div class="vn">${(s.v||0).toLocaleString()}</div><div class="cv${bad?' bad':''}">${s.cvr?('→ '+esc(s.cvr)):'起點'}</div></div>`;}).join('')+`</div>`+(d.funnel_note?`<div class="fnote">${esc(d.funnel_note)}</div>`:'');}
+ if(fs.length){const mx=Math.max.apply(null,fs.map(s=>s.v||0).concat([1]));document.getElementById('funnel').innerHTML=`<div class="fl7">`+fs.map(s=>{const w=Math.max(Math.round((s.v||0)/mx*100),1);const bad=(s.cvr==='0%');return `<div class="row"><div class="nm">${esc(s.k)}</div><div class="track"><div class="fbar7" style="width:${w}%"></div></div><div class="vn">${(s.v||0).toLocaleString()}</div><div class="cv${bad?' bad':''}">${s.cvr?('→ '+esc(s.cvr)):'起點'}</div></div>`;}).join('')+`</div>`+(d.funnel_note?`<div class="fnote">${esc(d.funnel_note)}</div>`:'');}
  else{const f=d.funnel||{};document.getElementById('funnel').innerHTML=`<div class="fnote">配對 ${f.matches??'—'} → 雙方成交 ${f.deposits??'—'}（CVR ${f.rate||'—'}）</div>`;}
  const mk=d.marketing,mEl=document.getElementById('market');
  if(mk&&mEl){const cpi=mk.cpi||{},fsh=mk.female_share||{};mEl.innerHTML=`<div class="cell"><div class="lab">本週 CPI（混合）</div><div class="num">${esc(cpi.week||'—')}</div><div class="sub">總花費 / 總安裝</div><div class="cmp"><span>上週 <b>${esc(cpi.prev||'—')}</b></span><span>上上週 <b>${esc(cpi.prev2||'—')}</b></span></div></div><div class="cell"><div class="lab">CPI 月對比</div><div class="num" style="font-size:21px;margin-top:16px">${esc(cpi.mom||'—')}</div><div class="sub">月混合 CPI</div></div><div class="cell"><div class="lab">女生下載佔比</div><div class="num">${esc(fsh.week||'—')}</div><div class="sub">本週 Meta 女生安裝</div><div class="cmp"><span>${esc(fsh.mom||'')}</span></div></div><div class="cell"><div class="lab">本週投放</div><div class="num" style="font-size:21px;margin-top:16px">${esc(mk.spend_week||'—')}</div><div class="sub">安裝 ${mk.installs_week??'—'} 次</div></div>`+(mk.note?`<div class="fnote" style="grid-column:1/-1">${esc(mk.note)}</div>`:'');}
@@ -308,7 +343,44 @@ function renderAgenda(){const c=document.getElementById('agenda');c.innerHTML=''
   e.innerHTML=`<div class="agn">${i+1}</div><div class="agm"><div class="agt">${esc(a.topic)}</div><div class="ags">${a.owner?`<span>👤 ${esc(a.owner)}</span>`:''}${a.mins?`<span>⏱ ${esc(a.mins)} 分</span>`:''}</div>${a.note?`<div class="agnote">${esc(a.note)}</div>`:''}</div><div class="acts"><button class="ib">✎</button><button class="ib">✕</button></div>`;
   const[ed,x]=e.querySelectorAll('.ib');ed.onclick=()=>openEd('agenda',a.id);x.onclick=()=>{if(confirm('刪除議程？')){BOARD.agenda=BOARD.agenda.filter(z=>z.id!==a.id);saveBoard();renderAgenda();}};c.appendChild(e);});
  if(!BOARD.agenda.length)c.innerHTML='<div class="empty">尚無議程。</div>';}
-function renderAll(){renderTabs();renderOverview();renderTasks();renderGoals();renderAgenda();}
+function renderAll(){renderTabs();renderOverview();renderTasks();renderGoals();renderAgenda();renderStandup();}
+/* ---- standup (每日三問：昨天/今天/卡關) ---- */
+const ROSTER=['Jesse','WeiYin','Cookie','Miiia','Stan','RD'];
+function todayStr(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function renderStandup(){const c=document.getElementById('standup');if(!c)return;
+ const list=(BOARD.standups||[]).slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+ if(!list.length){c.innerHTML='<div class="empty">尚無站會紀錄，點「+ 新增今日站會」開始記錄昨天 / 今天 / 卡關。</div>';return;}
+ c.innerHTML=list.map(su=>{const ppl=su.people||[];const blk=ppl.filter(p=>(p.block||'').trim()).length;
+  return `<div class="sucard"><div class="suhd"><div class="sudate">${esc(su.date||'')}</div><div class="sumeta">${ppl.length} 人${blk?` · <span class="sublk">${blk} 卡關</span>`:''}</div><div class="acts"><button class="ib" data-ed="${su.id}">✎</button><button class="ib" data-del="${su.id}">✕</button></div></div>`
+   +(su.note?`<div class="sunote">${esc(su.note)}</div>`:'')
+   +`<div class="supeople">`+ppl.map(p=>`<div class="superson"><div class="supn">${esc(p.name||'—')}</div><div class="supf"><span class="supk">昨天</span><span>${esc(p.yest||'—')}</span></div><div class="supf"><span class="supk">今天</span><span>${esc(p.today||'—')}</span></div><div class="supf${(p.block||'').trim()?' blk':''}"><span class="supk">卡關</span><span>${esc(p.block||'—')}</span></div></div>`).join('')+`</div></div>`;
+ }).join('');
+ c.querySelectorAll('[data-ed]').forEach(b=>b.onclick=()=>openStandup(b.dataset.ed));
+ c.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{if(confirm('刪除這場站會？')){BOARD.standups=BOARD.standups.filter(z=>z.id!==b.dataset.del);saveBoard();renderAll();}});}
+let suEd=null;
+function openStandup(id){const item=id?(BOARD.standups||[]).find(x=>x.id===id):null;
+ suEd={id:id||null,draft:item?clone(item):{date:todayStr(),note:'',people:ROSTER.map(n=>({name:n,yest:'',today:'',block:''}))}};
+ document.getElementById('mTitle').textContent=id?'編輯站會':'新增今日站會';
+ document.getElementById('bDel').style.display=id?'':'none';
+ renderStandupBody();
+ document.querySelector('.mf').style.display='flex';
+ document.querySelector('.save').onclick=saveStandup;
+ document.getElementById('bDel').onclick=()=>{if(suEd.id&&confirm('刪除這場站會？')){BOARD.standups=BOARD.standups.filter(x=>x.id!==suEd.id);saveBoard();closeStandup();renderAll();}};
+ document.getElementById('mb').classList.add('open');}
+function closeStandup(){document.getElementById('mb').classList.remove('open');suEd=null;document.querySelector('.save').onclick=saveEd;document.getElementById('bDel').onclick=delEd;}
+function renderStandupBody(){const su=suEd.draft;
+ const rows=su.people.map((p,i)=>`<div class="suedit"><div class="suehd"><input class="sue_name" data-i="${i}" value="${esc(p.name||'')}" placeholder="成員"><button class="ib sue_rm" data-i="${i}" title="移除成員">✕</button></div><textarea class="sue_yest" data-i="${i}" placeholder="昨天完成…">${esc(p.yest||'')}</textarea><textarea class="sue_today" data-i="${i}" placeholder="今天計畫…">${esc(p.today||'')}</textarea><textarea class="sue_block" data-i="${i}" placeholder="卡關 / 需要協助…">${esc(p.block||'')}</textarea></div>`).join('');
+ document.getElementById('mBody').innerHTML=`<div class="fld"><label>日期</label><input id="sue_date" value="${esc(su.date||'')}"></div><div class="sulist">${rows}</div><button class="sbtn" id="sue_add" style="margin-top:2px">+ 新增成員</button><div class="fld" style="margin-top:14px"><label>整體備註（選填）</label><textarea id="sue_note">${esc(su.note||'')}</textarea></div>`;
+ const body=document.getElementById('mBody');
+ body.querySelector('#sue_add').onclick=()=>{syncStandupDraft();su.people.push({name:'',yest:'',today:'',block:''});renderStandupBody();};
+ body.querySelectorAll('.sue_rm').forEach(b=>b.onclick=()=>{syncStandupDraft();su.people.splice(+b.dataset.i,1);renderStandupBody();});}
+function syncStandupDraft(){const su=suEd.draft;const dt=document.getElementById('sue_date'),nt=document.getElementById('sue_note');if(dt)su.date=dt.value;if(nt)su.note=nt.value;
+ const set=(cls,key)=>document.querySelectorAll('.'+cls).forEach(el=>{const i=+el.dataset.i;if(su.people[i])su.people[i][key]=el.value;});
+ set('sue_name','name');set('sue_yest','yest');set('sue_today','today');set('sue_block','block');}
+function saveStandup(){syncStandupDraft();const su=suEd.draft;su.people=su.people.filter(p=>(p.name||'').trim()||(p.yest||'').trim()||(p.today||'').trim()||(p.block||'').trim());
+ if(suEd.id){const i=BOARD.standups.findIndex(x=>x.id===suEd.id);if(i>=0)BOARD.standups[i]={...BOARD.standups[i],...su};}
+ else{su.id=uid('su');BOARD.standups.unshift(su);}
+ saveBoard();closeStandup();renderAll();}
 
 /* ---- editor ---- */
 const F={tasks:[['t','標題','text'],['s','狀態','status'],['cat','分類','sel:,task,bug,dept'],['team','團隊','text'],['prio','優先','sel:,urgent,high,normal,low'],['owner','負責人','text'],['due','期限','text'],['note','備註','area']],
@@ -316,6 +388,7 @@ const F={tasks:[['t','標題','text'],['s','狀態','status'],['cat','分類','s
  agenda:[['topic','議題','text'],['owner','負責','text'],['mins','分鐘','text'],['note','說明','area']]};
 let edx=null;
 function openEd(list,id){edx={list,id};const def=F[list];const item=id?BOARD[list].find(x=>x.id===id):{};
+ document.querySelector('.save').onclick=saveEd;document.getElementById('bDel').onclick=delEd;
  document.getElementById('mTitle').textContent=(id?'編輯':'新增');document.getElementById('bDel').style.display=id?'':'none';
  document.getElementById('mBody').innerHTML=def.map(([k,lab,t])=>{let v=item?item[k]:'';
   if(t==='area')return `<div class="fld"><label>${lab}</label><textarea id="e_${k}">${esc(v||'')}</textarea></div>`;
@@ -323,7 +396,7 @@ function openEd(list,id){edx={list,id};const def=F[list];const item=id?BOARD[lis
   if(t.startsWith('sel:')){const opts=t.slice(4).split(',');return `<div class="fld"><label>${lab}</label><select id="e_${k}">${opts.map(o=>`<option value="${o}"${v===o?' selected':''}>${o===''?'（無）':(CAT[o]||o)}</option>`).join('')}</select></div>`;}
   return `<div class="fld"><label>${lab}</label><input id="e_${k}" value="${esc(v||'')}"></div>`;}).join('');
  document.getElementById('mb').classList.add('open');}
-function closeMb(){document.getElementById('mb').classList.remove('open');edx=null;}
+function closeMb(){document.getElementById('mb').classList.remove('open');edx=null;suEd=null;document.querySelector('.save').onclick=saveEd;document.getElementById('bDel').onclick=delEd;}
 function saveEd(){if(!edx)return;const{list,id}=edx;const o=id?BOARD[list].find(x=>x.id===id):{id:uid(list[0])};
  F[list].forEach(([k])=>{const el=document.getElementById('e_'+k);if(el)o[k]=el.value;});
  if((list==='tasks'||list==='goals')&&!o.s)o.s='todo';if(!id)BOARD[list].push(o);saveBoard();closeMb();renderAll();}
@@ -343,7 +416,7 @@ function openSync(){edx=null;document.getElementById('mTitle').textContent='同�
  document.getElementById('mb').classList.add('open');}
 function v(id){const e=document.getElementById(id);return e?e.value.trim():'';}
 function b64(str){return btoa(unescape(encodeURIComponent(str)));}
-function payload(){return JSON.stringify({tasks:BOARD.tasks,goals:BOARD.goals,agenda:BOARD.agenda,accepted:BOARD.accepted,dismissed:BOARD.dismissed,updatedAt:new Date().toISOString()},null,2);}
+function payload(){return JSON.stringify({tasks:BOARD.tasks,goals:BOARD.goals,agenda:BOARD.agenda,standups:BOARD.standups,accepted:BOARD.accepted,dismissed:BOARD.dismissed,updatedAt:new Date().toISOString()},null,2);}
 async function syncUp(){if(!SYNC.token||!SYNC.owner||!SYNC.repo){openSync();return;}
  setSyncState('同步中…');const api=`https://api.github.com/repos/${SYNC.owner}/${SYNC.repo}/contents/board.json`;
  try{let sha=null;const g=await fetch(api+'?ref='+SYNC.branch,{headers:{Authorization:'Bearer '+SYNC.token}});if(g.ok)sha=(await g.json()).sha;
@@ -351,7 +424,7 @@ async function syncUp(){if(!SYNC.token||!SYNC.owner||!SYNC.repo){openSync();retu
   if(r.ok)setSyncState('✓ 已同步雲端 · '+new Date().toLocaleTimeString('zh-TW'));else{const e=await r.json();setSyncState('同步失敗：'+(e.message||r.status));}
  }catch(e){setSyncState('同步失敗（網路或權限）');}}
 async function syncDown(){if(!confirm('從雲端 board.json 覆蓋本機編輯？'))return;
- try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已從雲端載入');}catch(e){setSyncState('雲端尚無 board.json');}}
+ try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','standups','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已從雲端載入');}catch(e){setSyncState('雲端尚無 board.json');}}
 function exportLocal(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([payload()],{type:'application/json'}));a.download='board_backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();}
 
 /* ---- live data (seed first, then fetch with timeout — never blank, never hang) ---- */
@@ -361,7 +434,7 @@ async function fetchJSON(url){const c=new AbortController();const t=setTimeout((
  try{const r=await fetch(url+'?t='+Date.now(),{cache:'no-store',signal:c.signal});clearTimeout(t);if(!r.ok)return null;return await r.json();}catch(e){clearTimeout(t);return null;}}
 async function loadData(){const d=await fetchJSON('data.json');if(d)DATA=d;const ib=await fetchJSON('inbox.json');if(ib)INBOX=ib;renderSafe();}
 let started=false;
-async function autoPullBoard(){try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();const lu=(BOARD&&BOARD.updatedAt)?Date.parse(BOARD.updatedAt):0;const cu=d.updatedAt?Date.parse(d.updatedAt):0;if(cu>lu){BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已載入雲端最新看板');}}catch(e){}}
+async function autoPullBoard(){try{const r=await fetch('board.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();const lu=(BOARD&&BOARD.updatedAt)?Date.parse(BOARD.updatedAt):0;const cu=d.updatedAt?Date.parse(d.updatedAt):0;if(cu>lu){BOARD={...DEF_BOARD,...d};['tasks','goals','agenda','standups','accepted','dismissed'].forEach(k=>BOARD[k]=BOARD[k]||[]);localStorage.setItem(LSB,JSON.stringify(BOARD));renderAll();setSyncState('✓ 已載入雲端最新看板');}}catch(e){}}
 function start(){if(started)return;started=true;loadBoard();loadSync();setSyncState(SYNC.token?'已設定同步':'本機暫存');DATA=SEED_DATA;INBOX=SEED_INBOX;renderSafe();loadData();autoPullBoard();setInterval(loadData,60000);}
 window.onerror=function(m,s,l){showErr((m||'錯誤')+' @line '+(l||'?'));};
 document.getElementById('mb').addEventListener('click',e=>{if(e.target.id==='mb')closeMb();});
