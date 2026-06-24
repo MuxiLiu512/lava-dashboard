@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-06-24T14:01:52+08:00",
+  "date": "2026-06-24",
+  "week_label": "本週 6/22–6/28",
+  "source": "board.json（看板）+ ClickUp 🎯CEO/PM/UI 追蹤",
+  "week_goals": [
+    {
+      "t": "女性用戶占比 → 50%",
+      "note": "現 23%（自 17% 提升）；仍為核心增長缺口"
+    },
+    {
+      "t": "提升 配對 → 碰面 轉換",
+      "note": "⚠️ 本週成交 0；Super Like 主要目標之一"
+    },
+    {
+      "t": "WAU → 3,000 / MAU → 5,000",
+      "note": "WAU ~993、MAU 2,350"
+    },
+    {
+      "t": "每月成功完成約會場次（北極星）",
+      "note": "累計 66，近 2 週停滯"
+    }
+  ],
+  "suggested_today": [
+    {
+      "t": "拆解 match→deposit 漏斗破口、定位流失點並當場指派負責人",
+      "why": "雙方成交連 2 週掛 0（第一優先）"
+    },
+    {
+      "t": "板橋兩間店 final + 通知行銷啟動在地招募",
+      "why": "看板 urgent · Jesse · 期限 6/24"
+    },
+    {
+      "t": "客製化約會 PRD + 收費方式 + prototype",
+      "why": "ClickUp urgent · 期限 6/24"
+    },
+    {
+      "t": "2.0 上線收尾（問題回報/email/Lava Point）",
+      "why": "ClickUp urgent · 期限 6/18"
+    },
+    {
+      "t": "6/17 週會待拍板：同性別篩選/週末/辦公室/自動化/HalfCheck",
+      "why": "ClickUp urgent · 期限 6/17"
+    }
+  ],
+  "blockers": [
+    {
+      "t": "接收方 0 元刷卡技術問題如何解？",
+      "owner": "RD"
+    },
+    {
+      "t": "延遲付款授權 pre-auth API 是否可行？",
+      "owner": "Stan"
+    },
+    {
+      "t": "Super Like 押金機制 B 是否加入？",
+      "owner": "PM"
+    },
+    {
+      "t": "本週成交 0、配對→碰面轉換過低，如何提升？",
+      "owner": "CEO"
+    },
+    {
+      "t": "Apple Enterprise Program 申請卡關",
+      "owner": "Stan"
+    },
+    {
+      "t": "女性下載率偏低（App 名稱「不聊天的交友軟體」卻步）",
+      "owner": "MKT"
+    }
+  ],
+  "open_todos": [
+    {
+      "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）",
+      "owner": "Jesse",
+      "due": "6/24",
+      "src": "看板"
+    },
+    {
+      "t": "每週活動功能頁面驗收 + 瑜珈/跑團排期",
+      "owner": "Jesse+WY",
+      "due": "6/24",
+      "src": "看板"
+    },
+    {
+      "t": "拓店 6 區：台北/新北/桃園/台中/台南/高雄",
+      "owner": "Jesse",
+      "due": "7月",
+      "src": "看板"
+    },
+    {
+      "t": "與 SitDown 溝通拍攝餐點費用分擔",
+      "owner": "Cookie",
+      "due": "",
+      "src": "看板"
+    },
+    {
+      "t": "PostHog 產品追蹤稽核（盤事件/通知/找缺口）",
+      "owner": "Jesse",
+      "due": "6/28",
+      "src": "ClickUp"
+    },
+    {
+      "t": "每週實體活動：跑團招募 + 活動排期",
+      "owner": "Jesse",
+      "due": "6/27",
+      "src": "ClickUp"
+    },
+    {
+      "t": "海巡機器人：資料源改 Sheet/API、解讀取痛點",
+      "owner": "Jesse",
+      "due": "6/26",
+      "src": "ClickUp"
+    },
+    {
+      "t": "校準季度 OKR / 北極星指標",
+      "owner": "Jesse",
+      "due": "6/26",
+      "src": "ClickUp"
+    },
+    {
+      "t": "通知（Notification）盤點與補齊",
+      "owner": "Cookie",
+      "due": "6/24",
+      "src": "ClickUp"
+    },
+    {
+      "t": "與 WY 完成商家協助 SOP 並教育店家",
+      "owner": "Jesse",
+      "due": "6/24",
+      "src": "ClickUp"
+    },
+    {
+      "t": "Halfway 應收應付 / 各專案利潤盤點",
+      "owner": "Jesse",
+      "due": "6/23",
+      "src": "ClickUp"
+    }
+  ],
+  "backlog": [
+    {
+      "t": "書妍股份/各公司銀行匯款資料變更",
+      "src": "ClickUp"
+    },
+    {
+      "t": "競品研究：Whim/First Round/Paktor/Edating",
+      "src": "ClickUp"
+    },
+    {
+      "t": "學習 Hermes Agent 使用方式",
+      "src": "ClickUp"
+    }
+  ],
+  "carryover": [
+    {
+      "t": "KYC 正式環境是否已上線 + 啟動每日真人審核"
+    },
+    {
+      "t": "週末約會 / 每週活動 / 同性別篩選 上線排程確認"
+    },
+    {
+      "t": "退款 UX：說明文字上線 + 取消→退款通知流程是否實作"
+    }
+  ],
+  "note": "系統自動彙整草稿。立會時按「↧ 帶入今日草稿」生成今日紀錄再編輯；隔天昨日回顧會自動顯示前一天紀錄。"
+}

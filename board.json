@@ -1,14 +1,6 @@
 {
   "tasks": [
     {
-      "id": "t_mqnkz85rjqe",
-      "t": "修復 Lava Point 全額折抵無法付款",
-      "s": "todo",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "prio": "high"
-    },
-    {
       "id": "t1",
       "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）",
       "s": "doing",
@@ -123,54 +115,62 @@
       "note": "板橋兩間 final → 通知行銷啟動在地招募；Meta 預算優先女性受眾；KOC『認識陌生人系列』上下兩集。"
     }
   ],
-  "standups": [
+  "discuss": [
     {
-      "date": "2026-06-23",
-      "note": "",
-      "people": [
-        {
-          "name": "Jesse",
-          "yest": "調整 Living Dashboard，將站會的功能加入",
-          "today": "繼續完成 BD 拓展",
-          "block": "clickup 上 @ stan 的項目"
-        },
-        {
-          "name": "WeiYin",
-          "yest": "",
-          "today": "",
-          "block": ""
-        },
-        {
-          "name": "Cookie",
-          "yest": "撰寫 今日約會修改建議",
-          "today": "整理投放的女性 raw data? ",
-          "block": ""
-        },
-        {
-          "name": "Miiia",
-          "yest": "",
-          "today": "繼續串 posthog ",
-          "block": "待 stan 給訂單紀錄的後端API"
-        },
-        {
-          "name": "Stan",
-          "yest": "「同性配對＆週五六」上線",
-          "today": "",
-          "block": ""
-        },
-        {
-          "name": "RD",
-          "yest": "",
-          "today": "",
-          "block": ""
-        }
-      ],
-      "id": "su_mqqr7jdlest"
+      "id": "d1",
+      "t": "接收方 0 元刷卡技術問題如何解？",
+      "s": "plan",
+      "owner": "RD",
+      "note": "Super Like 以 Coupon 邏輯實作；0 元刷卡目前技術有問題"
+    },
+    {
+      "id": "d2",
+      "t": "延遲付款授權 pre-auth API 是否可行？",
+      "s": "plan",
+      "owner": "Stan",
+      "note": "發起時授權最低金額、對方回覆後扣款；解 Super Like 與週末/客製化金流衝突"
+    },
+    {
+      "id": "d3",
+      "t": "Super Like 押金機制 B 是否加入？",
+      "s": "plan",
+      "owner": "PM",
+      "note": "先上補償方案 A，監測放鴿率後再決定押金"
+    },
+    {
+      "id": "d4",
+      "t": "本週成交 0、配對→碰面轉換過低，如何提升？",
+      "s": "plan",
+      "owner": "CEO",
+      "note": "Super Like 是否足夠？需配套"
+    },
+    {
+      "id": "d5",
+      "t": "Apple Enterprise Program 申請卡關",
+      "s": "plan",
+      "owner": "Stan",
+      "note": "持續追蹤 Halftrack / Apple Enterprise"
+    },
+    {
+      "id": "d6",
+      "t": "女性下載率偏低（App 名稱「不聊天的交友軟體」卻步）",
+      "s": "plan",
+      "owner": "MKT",
+      "note": "女性 CTR 為男性 2 倍但下載率僅 1/3"
     }
   ],
-  "accepted": [
-    "ib_1782027782051"
-  ],
+  "accepted": [],
   "dismissed": [],
-  "updatedAt": "2026-06-24T04:46:11.943Z"
+  "updatedAt": "2026-06-24T14:02:29+08:00",
+  "standups": [
+    {
+      "id": "su_seed_0623",
+      "date": "2026-06-23",
+      "done": "6/21 全員會議後追蹤：KYC 測試回饋多已排除；退款政策由「7 天前退 100%」改為「5 天前退」；週末約會／每週活動／同性別篩選已決議、待確認排程。",
+      "today": "確認 KYC 是否上線並啟動每日真人審核；推進 match→deposit 漏斗破口；板橋兩店 final 並通知行銷在地招募。",
+      "blockers": "雙方成交（deposit_both）連 2 週掛 0；Super Like 0 元刷卡技術問題；Apple Enterprise Program 申請卡關。",
+      "decisions": "",
+      "carryover": "⚠️ 原 6/23 立會紀錄已遺失，此為依會議 agenda 重建之摘要，供今日延續討論。"
+    }
+  ]
 }
