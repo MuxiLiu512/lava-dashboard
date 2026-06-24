@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-24T14:45:26+08:00",
+  "generated_at": "2026-06-24T22:34:32+08:00",
   "date": "2026-06-24",
   "week_label": "本週 6/22–6/28",
   "source": "board.json（看板）+ ClickUp 🎯CEO/PM/UI 追蹤",
   "week_goals": [
     {
       "t": "女性用戶占比 → 50%",
-      "note": "現 23%（自 17% 提升）；仍為核心增長缺口"
+      "note": "現約 23%（自 17% 提升）；data.json 本週女活躍佔 18.6%，仍為核心增長缺口"
     },
     {
       "t": "提升 配對 → 碰面 轉換",
@@ -14,7 +14,7 @@
     },
     {
       "t": "WAU → 3,000 / MAU → 5,000",
-      "note": "WAU ~993、MAU 2,350"
+      "note": "WAU ~713（本週至今）、MAU 2,368"
     },
     {
       "t": "每月成功完成約會場次（北極星）",
@@ -24,53 +24,53 @@
   "suggested_today": [
     {
       "t": "拆解 match→deposit 漏斗破口、定位流失點並指派負責人",
-      "why": "雙方成交（deposit_both）連 2 週掛 0、本週付訂發起 30→雙方付訂 0（第一優先）"
+      "why": "雙方成交（deposit_both）連 2 週掛 0、本週仍為 0，但配對健康（~119/週、付訂發起 30 人）；須定位流失點（0 元刷卡／Lava Point 折抵付款 bug？流程信任？金額？）並當場指派負責人與行動"
     },
     {
       "t": "板橋兩間店 final + 通知行銷啟動在地招募",
-      "why": "看板 urgent · Jesse · 期限 6/24"
+      "why": "看板 urgent、ddl 6/24；拓店與在地招募的關鍵節點"
     },
     {
       "t": "客製化約會 PRD + 收費方式文件 + 介面 prototype",
-      "why": "ClickUp urgent · Jesse · 期限 6/24"
+      "why": "ClickUp urgent、ddl 6/24；新收費功能待定稿"
     },
     {
       "t": "2.0 上線收尾追蹤（問題回報 / email 5 封 / Lava Point）",
-      "why": "ClickUp urgent · Jesse · 期限 6/18（逾期）"
+      "why": "ClickUp urgent；上線後遺留項目收尾，與付款 bug 相關"
     },
     {
-      "t": "6/17 週會待拍板：同性別篩選 / 週末上線 / 辦公室 / 自動化 / HalfCheck UX",
-      "why": "ClickUp urgent · Jesse · 期限 6/17（逾期）"
+      "t": "6/17 週會待拍板項目落地：同性別篩選 / 週末上線 / workflow 自動化 / HalfCheck UX",
+      "why": "ClickUp urgent；多項已決議，須確認排期與上線狀態"
     }
   ],
   "blockers": [
     {
-      "t": "6/21 付款 Bug：Lava Point 全額折抵無法付款（疑似 0 元刷卡）／點通知後教學被重置、異常卡牌／進不到設定卡牌頁",
+      "t": "接收方 0 元刷卡技術問題如何解？（Super Like 以 Coupon 邏輯實作）",
       "owner": "RD"
     },
     {
-      "t": "接收方 0 元刷卡技術問題如何解（Super Like 以 Coupon 邏輯實作）",
-      "owner": "RD"
-    },
-    {
-      "t": "延遲付款授權 pre-auth API 是否可行（解 Super Like 與週末／客製化金流衝突）",
+      "t": "延遲付款授權 pre-auth API 是否可行？（解 Super Like 與週末／客製化金流衝突）",
       "owner": "Stan"
     },
     {
-      "t": "本週成交 0、配對→碰面轉換過低，如何提升（Super Like 是否足夠）",
-      "owner": "CEO"
-    },
-    {
-      "t": "Super Like 押金機制 B 是否加入（先上補償方案 A、監測放鴿率）",
+      "t": "Super Like 押金機制 B 是否加入？（先上補償方案 A，監測放鴿率後再決定）",
       "owner": "PM"
     },
     {
-      "t": "Apple Enterprise Program / Halftrack 申請卡關",
+      "t": "本週成交 0、配對→碰面轉換過低，如何提升？（Super Like 是否足夠、需配套）",
+      "owner": "CEO"
+    },
+    {
+      "t": "Apple Enterprise Program 申請卡關（持續追蹤 Halftrack）",
       "owner": "Stan"
     },
     {
-      "t": "女性下載率偏低（CTR 為男性 2 倍但下載率僅 1/3；App 名稱卻步）",
+      "t": "女性下載率偏低（女性 CTR 為男性 2 倍但下載率僅 1/3；App 名稱卻步）",
       "owner": "MKT"
+    },
+    {
+      "t": "6/21 付款 Bug：Lava Point 全額折抵無法付款（疑似 0 元刷卡）／點通知後教學被重置出現卡牌／進不到設定卡牌頁、流程走不完",
+      "owner": "RD"
     }
   ],
   "open_todos": [
@@ -93,21 +93,21 @@
       "src": "看板"
     },
     {
-      "t": "Halfway 應收應付 / 各專案利潤 / Celia 分潤盤點",
-      "owner": "Jesse",
-      "due": "6/23",
-      "src": "ClickUp"
-    },
-    {
-      "t": "與 WY 完成商家協助 SOP 並教育合作店家",
-      "owner": "Jesse",
-      "due": "6/24",
-      "src": "ClickUp"
-    },
-    {
-      "t": "通知（Notification）盤點與補齊",
+      "t": "與 SitDown 溝通拍攝餐點費用分擔",
       "owner": "Cookie",
-      "due": "6/24",
+      "due": "",
+      "src": "看板"
+    },
+    {
+      "t": "PostHog 產品追蹤稽核（盤事件 / 通知 / 找缺口）",
+      "owner": "Jesse",
+      "due": "6/28",
+      "src": "ClickUp"
+    },
+    {
+      "t": "每週實體活動：跑團核心成員招募 + 活動排期",
+      "owner": "Jesse",
+      "due": "6/27",
       "src": "ClickUp"
     },
     {
@@ -123,52 +123,51 @@
       "src": "ClickUp"
     },
     {
-      "t": "每週實體活動：跑團核心成員招募 + 活動排期",
-      "owner": "Jesse",
-      "due": "6/27",
+      "t": "通知（Notification）盤點與補齊",
+      "owner": "Cookie",
+      "due": "6/24",
       "src": "ClickUp"
     },
     {
-      "t": "PostHog 產品追蹤稽核（盤事件 / 通知 / 找缺口）",
+      "t": "與 WY 完成商家協助 SOP 並教育合作店家",
       "owner": "Jesse",
-      "due": "6/28",
+      "due": "6/24",
+      "src": "ClickUp"
+    },
+    {
+      "t": "Halfway 應收應付 / 各專案利潤 / Celia 分潤盤點",
+      "owner": "Jesse",
+      "due": "6/23",
       "src": "ClickUp"
     }
   ],
   "backlog": [
     {
-      "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）",
+      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
       "src": "ClickUp"
     },
     {
-      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
+      "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）",
       "src": "ClickUp"
     },
     {
       "t": "學習 Hermes Agent 使用方式",
       "src": "ClickUp"
-    },
-    {
-      "t": "與 SitDown 溝通拍攝餐點費用分擔",
-      "src": "看板"
     }
   ],
   "carryover": [
     {
-      "t": "確認 KYC 是否上線並啟動每日真人審核"
+      "t": "確認 KYC 是否上線並啟動每日真人審核（昨日待辦，仍待確認）"
     },
     {
-      "t": "推進 match→deposit 漏斗破口（雙方成交仍為 0）"
+      "t": "推進 match→deposit 漏斗破口（昨日待辦；今日 deposit_both 仍為 0）"
     },
     {
-      "t": "板橋兩店 final 並通知行銷在地招募"
+      "t": "板橋兩店 final + 通知行銷啟動在地招募（昨日待辦；看板 t2 仍 doing）"
     },
     {
-      "t": "Super Like 0 元刷卡技術問題未解"
-    },
-    {
-      "t": "Apple Enterprise Program 申請卡關"
+      "t": "Super Like 0 元刷卡技術問題待解（昨日卡關，未解）"
     }
   ],
-  "note": "本檔為系統每日自動草稿（排程產生）。立會時於儀表板「立會」分頁按『↧ 帶入今日草稿』即可生成今日紀錄、直接討論。已去個資（不含電話／Email／用戶全名）。"
+  "note": "本檔為系統自動產生之立會草稿（每日立會前更新）。立會時於儀表板「立會」分頁按『↧ 帶入今日草稿』即可生成今日紀錄並直接討論。草稿僅供帶入、不覆寫看板；board.json 仍由人在儀表板維護。"
 }
