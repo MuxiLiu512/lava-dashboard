@@ -123,9 +123,54 @@
       "note": "板橋兩間 final → 通知行銷啟動在地招募；Meta 預算優先女性受眾；KOC『認識陌生人系列』上下兩集。"
     }
   ],
+  "standups": [
+    {
+      "date": "2026-06-23",
+      "note": "",
+      "people": [
+        {
+          "name": "Jesse",
+          "yest": "調整 Living Dashboard，將站會的功能加入",
+          "today": "繼續完成 BD 拓展",
+          "block": "clickup 上 @ stan 的項目"
+        },
+        {
+          "name": "WeiYin",
+          "yest": "",
+          "today": "",
+          "block": ""
+        },
+        {
+          "name": "Cookie",
+          "yest": "撰寫 今日約會修改建議",
+          "today": "整理投放的女性 raw data? ",
+          "block": ""
+        },
+        {
+          "name": "Miiia",
+          "yest": "",
+          "today": "繼續串 posthog ",
+          "block": "待 stan 給訂單紀錄的後端API"
+        },
+        {
+          "name": "Stan",
+          "yest": "「同性配對＆週五六」上線",
+          "today": "",
+          "block": ""
+        },
+        {
+          "name": "RD",
+          "yest": "",
+          "today": "",
+          "block": ""
+        }
+      ],
+      "id": "su_mqqr7jdlest"
+    }
+  ],
   "accepted": [
     "ib_1782027782051"
   ],
   "dismissed": [],
-  "updatedAt": "2026-06-21T09:25:18.645Z"
+  "updatedAt": "2026-06-24T04:46:11.943Z"
 }
