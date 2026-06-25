@@ -115,54 +115,16 @@
       "note": "板橋兩間 final → 通知行銷啟動在地招募；Meta 預算優先女性受眾；KOC『認識陌生人系列』上下兩集。"
     }
   ],
-  "discuss": [
-    {
-      "id": "d1",
-      "t": "接收方 0 元刷卡技術問題如何解？",
-      "s": "plan",
-      "owner": "RD",
-      "note": "Super Like 以 Coupon 邏輯實作；0 元刷卡目前技術有問題"
-    },
-    {
-      "id": "d2",
-      "t": "延遲付款授權 pre-auth API 是否可行？",
-      "s": "plan",
-      "owner": "Stan",
-      "note": "發起時授權最低金額、對方回覆後扣款；解 Super Like 與週末/客製化金流衝突"
-    },
-    {
-      "id": "d3",
-      "t": "Super Like 押金機制 B 是否加入？",
-      "s": "plan",
-      "owner": "PM",
-      "note": "先上補償方案 A，監測放鴿率後再決定押金"
-    },
-    {
-      "id": "d4",
-      "t": "本週成交 0、配對→碰面轉換過低，如何提升？",
-      "s": "plan",
-      "owner": "CEO",
-      "note": "Super Like 是否足夠？需配套"
-    },
-    {
-      "id": "d5",
-      "t": "Apple Enterprise Program 申請卡關",
-      "s": "plan",
-      "owner": "Stan",
-      "note": "持續追蹤 Halftrack / Apple Enterprise"
-    },
-    {
-      "id": "d6",
-      "t": "女性下載率偏低（App 名稱「不聊天的交友軟體」卻步）",
-      "s": "plan",
-      "owner": "MKT",
-      "note": "女性 CTR 為男性 2 倍但下載率僅 1/3"
-    }
-  ],
-  "accepted": [],
-  "dismissed": [],
-  "updatedAt": "2026-06-24T14:02:29+08:00",
   "standups": [
+    {
+      "id": "su_mqs69oy2vx5",
+      "date": "2026-06-24",
+      "done": "stan \n- lava points 全額折抵不會有問題\n- halfcheck 商家開啟關閉 bug 修復\n- 週末（五六）開啟\n- 用戶配對表單 N 欄補上\n\nmiiia\n- 移除 已確定碰面狀態好友頁面的解除好友選項\n- 增加 約會地點的超連結，UI可能加上底線或者在右側加上導航二字，提醒用戶可以按\n- Posthog event 串接\n\nCookie \n- threads 的資訊搜集？\n- WIP 輿情搜集、分析 automation\n- notification 改為 excel sheet \n\nWY\n- 假日上線的貼文\n\n\nJesse \n- ",
+      "today": "WY\n- 明天會發新店家上線貼文\n- 與 Jesse 討論選擇時間 UI ",
+      "blockers": "1. 補上 取消約會方只退 lava point 的退款機制說明\n\n2. 看是不是再必經流程加上更多後續的流程說明，例如進度顯示器，讓他們隨時都能知道接續的流程\n\n3. 在 matchlist 補充更多的狀態說明，讓用戶更清楚自己、對方的動向",
+      "decisions": "🌟 取消方只退 lava point，不退現金。\n每週活動要呈現的方式，將報名活動改為？",
+      "carryover": "主動取消方是否退回現金呢？\n>> 用戶可能是基於不可抗因素取消，會不會造成 PR 問題？\n\nKYC halfcheck 何時上線哩？\n>> \n\n"
+    },
     {
       "id": "su_seed_0623",
       "date": "2026-06-23",
@@ -172,5 +134,8 @@
       "decisions": "",
       "carryover": "⚠️ 原 6/23 立會紀錄已遺失，此為依會議 agenda 重建之摘要，供今日延續討論。"
     }
-  ]
+  ],
+  "accepted": [],
+  "dismissed": [],
+  "updatedAt": "2026-06-25T08:35:25.776Z"
 }
