@@ -117,6 +117,15 @@
   ],
   "standups": [
     {
+      "id": "su_mqtlvv5yy3d",
+      "date": "2026-06-25",
+      "done": "",
+      "today": "stan \n- 做完訂單紀錄後台 API \n- 讓被 banned 的 user 可以造訪個人頁面\n- 補上 KYC 通知\n\nmiiia\n- posthog event 串接\n- 修復 每週活動的敘述欄位不會顯示的 bug\n\ncookie\n- 審核 KYC \n- 優化 被取消配對的用戶顯示 UI \n- 建立  IG 貼文轉換到 threads 的機器人\n\nWY ＆ Jesse \n- 上架高雄店家\n- 業務拓展（國父紀念館店家）✅ $10,000 準備入帳！\n- 發文（週末上線貼文）\n- 用戶 interview \n- clickup task dashboard 建立，尚未完成\n- excel 合作商家起始日＆可以把合作細節計入",
+      "blockers": "",
+      "decisions": "- miiia 訂單紀錄預計在本週日、下週一完成\n- stan 明天會來做 halfcheck 新增地理位置、取消原因\n- KYC 自由心證，但不要太嚴苛\n- WY 接續會提供店家合作合約",
+      "carryover": ""
+    },
+    {
       "id": "su_mqs69oy2vx5",
       "date": "2026-06-24",
       "done": "stan \n- lava points 全額折抵不會有問題\n- halfcheck 商家開啟關閉 bug 修復\n- 週末（五六）開啟\n- 用戶配對表單 N 欄補上\n\nmiiia\n- 移除 已確定碰面狀態好友頁面的解除好友選項\n- 增加 約會地點的超連結，UI可能加上底線或者在右側加上導航二字，提醒用戶可以按\n- Posthog event 串接\n\nCookie \n- threads 的資訊搜集？\n- WIP 輿情搜集、分析 automation\n- notification 改為 excel sheet \n\nWY\n- 假日上線的貼文\n\n\nJesse \n- ",
@@ -137,5 +146,5 @@
   ],
   "accepted": [],
   "dismissed": [],
-  "updatedAt": "2026-06-25T08:35:25.776Z"
+  "updatedAt": "2026-06-25T14:54:22.636Z"
 }
