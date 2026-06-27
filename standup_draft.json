@@ -1,67 +1,67 @@
 {
-  "generated_at": "2026-06-26T22:20:19+08:00",
-  "date": "2026-06-26",
+  "generated_at": "2026-06-27T22:05:39+08:00",
+  "date": "2026-06-27",
   "week_label": "本週 6/22–6/28",
   "source": "board.json（看板）+ ClickUp 🎯CEO/PM/UI 追蹤",
   "week_goals": [
     {
       "t": "女性用戶占比 → 50%",
-      "note": "看板註記現約 23%；data.json 本週女性活躍 167（佔 18.6%，較上週 227 下滑）、行銷女性下載佔比 25.4%。仍為核心增長缺口"
+      "note": "現 23%（自 17% 提升）；仍為核心增長缺口"
     },
     {
       "t": "提升 配對 → 碰面 轉換",
-      "note": "⚠️ 本週雙方成交 0；Super Like 為主要目標之一"
+      "note": "⚠️ 本週成交 0；Super Like 為主要目標之一"
     },
     {
       "t": "WAU → 3,000 / MAU → 5,000",
-      "note": "data.json WAU 878（本週至今 6/21–6/26，較上週同期 923 下滑）、MAU 2,386（目標 5,000）"
+      "note": "WAU ~927、MAU ~2,389（本週數據）"
     },
     {
       "t": "每月成功完成約會場次（北極星）",
-      "note": "累計碰面組數 66，近 2 週掛 0、停滯"
+      "note": "累計 66，近 2 週停滯"
     }
   ],
   "suggested_today": [
     {
       "t": "拆解 match→deposit 漏斗破口、定位流失點並指派負責人",
-      "why": "雙方成交（deposit_both）連 2 週掛 0、本週仍為 0；配對健康（本週 119、付訂發起 33 人）但雙方付訂 0%——當前第一優先，須當場定位流失點並指派負責人"
+      "why": "雙方成交 deposit_both 連 2 週掛 0（本週 0；付訂發起 30 人→雙方付訂 0）、配對仍健康（119/週），為當前第一優先"
     },
     {
       "t": "板橋兩間店 final + 通知行銷啟動在地招募",
-      "why": "看板 BD urgent、due 6/24 已逾期；店家到位才能啟動在地招募與線下約會供給"
-    },
-    {
-      "t": "客製化約會 PRD + 收費方式文件 + 介面 prototype",
-      "why": "ClickUp urgent（due 6/24）；客製化約會金流與介面定義是提升成交的關鍵配套"
+      "why": "看板 urgent、due 6/24 已到期，卡住在地招募啟動（BD）"
     },
     {
       "t": "2.0 上線收尾追蹤（問題回報 / email 5 封 / Lava Point）",
-      "why": "ClickUp urgent；Lava Point 全額折抵付款 bug 直接擋住成交，須收斂"
+      "why": "ClickUp urgent；Lava Point 與付款體驗直接牽動成交漏斗"
     },
     {
-      "t": "6/17 週會待拍板：同性別篩選／週末上線／HalfCheck UX 等",
-      "why": "ClickUp urgent；多項決議卡在拍板，阻擋後續排期與上線"
+      "t": "客製化約會 PRD + 收費方式文件 + 介面 prototype",
+      "why": "ClickUp urgent；新收入功能需定稿才能進開發"
+    },
+    {
+      "t": "6/17 週會待拍板項：同性別篩選／週末上線／租辦公室／workflow 自動化／HalfCheck UX",
+      "why": "ClickUp urgent、逾期最久；多項決議卡關待當場拍板"
     }
   ],
   "blockers": [
     {
-      "t": "6/21 付款 Bug：Lava Point 全額折抵無法付款、教學被重置／異常卡牌、設定卡牌頁面走不完",
+      "t": "接收方 0 元刷卡技術問題未解（Super Like 以 Coupon 邏輯實作）",
       "owner": "RD"
     },
     {
-      "t": "接收方 0 元刷卡技術問題如何解（Super Like 以 Coupon 邏輯實作）",
+      "t": "6/21 付款 Bug：Lava Point 全額折抵無法付款（疑似 0 元刷卡）",
       "owner": "RD"
     },
     {
-      "t": "延遲付款授權 pre-auth API 是否可行（解 Super Like 與週末／客製化金流衝突）",
+      "t": "pre-auth 延遲付款授權 API 可行性未定（解金流衝突）",
       "owner": "Stan"
     },
     {
-      "t": "Super Like 押金機制 B 是否加入（先上補償方案 A、監測放鴿率）",
+      "t": "Super Like 押金機制 B 是否加入未定（先上補償方案 A）",
       "owner": "PM"
     },
     {
-      "t": "本週成交 0、配對→碰面轉換過低，如何提升（Super Like 是否足夠／需配套）",
+      "t": "雙方成交 0、配對→碰面轉換過低，Super Like 是否足夠待議",
       "owner": "CEO"
     },
     {
@@ -69,13 +69,13 @@
       "owner": "Stan"
     },
     {
-      "t": "女性下載率偏低（App 名稱「不聊天的交友軟體」卻步；女性 CTR 為男性 2 倍但下載率僅 1/3）",
+      "t": "女性下載率偏低（App 名稱『不聊天的交友軟體』卻步；女 CTR 為男 2 倍但下載率僅 1/3）",
       "owner": "MKT"
     }
   ],
   "open_todos": [
     {
-      "t": "發起/接受邀約畫面新增退款說明文字（交付 Miiia）",
+      "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）",
       "owner": "Jesse",
       "due": "6/24",
       "src": "看板"
@@ -135,7 +135,7 @@
       "src": "ClickUp"
     },
     {
-      "t": "Halfway 應收應付 / 各專案利潤 / 分潤盤點",
+      "t": "Halfway 應收應付 / 各專案利潤 / Celia 分潤盤點",
       "owner": "Jesse",
       "due": "6/23",
       "src": "ClickUp"
@@ -143,11 +143,11 @@
   ],
   "backlog": [
     {
-      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
+      "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）",
       "src": "ClickUp"
     },
     {
-      "t": "公司／負責人／各公司銀行匯款資料變更（備小章）",
+      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
       "src": "ClickUp"
     },
     {
@@ -157,20 +157,20 @@
   ],
   "carryover": [
     {
+      "t": "雙方成交 deposit_both 仍掛 0、match→deposit 漏斗破口未解（延續 6/23）"
+    },
+    {
       "t": "確認 KYC 上線狀態並啟動每日真人審核"
     },
     {
-      "t": "推進 match→deposit 漏斗破口（雙方成交連 2 週掛 0）"
+      "t": "板橋兩店 final 並通知行銷啟動在地招募"
     },
     {
-      "t": "板橋兩店 final 並通知行銷在地招募"
+      "t": "Super Like 接收方 0 元刷卡技術問題未解"
     },
     {
-      "t": "Super Like 接收方 0 元刷卡技術問題待解"
-    },
-    {
-      "t": "Apple Enterprise Program 申請卡關持續追蹤"
+      "t": "Apple Enterprise Program 申請仍卡關"
     }
   ],
-  "note": "系統自動草稿（每日立會前生成）。立會時於儀表板「立會」分頁按『↧ 帶入今日草稿』生成今日紀錄後直接討論。本草稿已去除個資（電話／Email／用戶全名），僅保留團隊暱稱與店家名。"
+  "note": "本檔為系統自動產生之立會草稿（每日立會前更新）；資料來源為看板 board.json 與 ClickUp 🎯CEO/PM/UI 追蹤清單。立會時於儀表板「立會」分頁按『↧ 帶入今日草稿』即可生成今日紀錄並直接討論。看板（board.json）由團隊於儀表板維護，本排程僅讀取、不修改。"
 }
