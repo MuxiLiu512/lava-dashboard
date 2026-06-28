@@ -77,14 +77,14 @@
       "topic": "進度 alignment & 本週指標 recap",
       "owner": "全員",
       "mins": "15",
-      "note": "【6/28 週會 · 自 6/21 以來盤點】指標：WAU 上週整週 964（較上上週 997 微降）、本週累積 225；配對仍健康；⚠️ 雙方成交（deposit_both）持續掛 0。逾期待交付（原 6/24）：①退款說明文字（Miiia）②板橋兩店 final ③每週活動頁面驗收＋瑜珈/跑團排期。延續中：KYC 上線＋真人審核、週末/每週活動/同性別篩選 排程、2.0 收尾、客製化 PRD、Super Like 金流。"
+      "note": "【6/28 週會 · 自 6/21 以來盤點】6/27 數據：WAU 964（上週 997、前週 1037，連兩週微降）、MAU 2258、女性佔比 24.9%、累計約會 194 組（紀錄寫『有更多約會了』）。⚠️ 但 dashboard deposit_both 仍顯示 0 —— 現場確認『194 組』與『雙方成交』口徑是否一致。逾期待交付（原 6/24）：退款說明文字（Miiia）、板橋兩店 final、每週活動頁面驗收＋瑜珈/跑團排期。"
     },
     {
       "id": "a2",
       "topic": "雙方成交漏斗破口（deposit_both 持續掛 0）",
       "owner": "CEO/RD",
       "mins": "20",
-      "note": "配對健康但成交持續為 0（上週整週亦 0）。拆解 match→deposit 各步驟，定位流失點（付款 bug？流程信任？金額？），當場指派負責人與本週行動。第一優先。"
+      "note": "配對健康（約 194/週）但 dashboard 成交持續 0。先釐清口徑，再拆解 match→deposit 各步驟、定位流失點（付款 bug？流程信任？金額？），當場指派負責人與本週行動。第一優先。"
     },
     {
       "id": "a3",
@@ -105,21 +105,28 @@
       "topic": "上線排程：週末約會 / 每週活動（瑜珈·跑團）/ 同性別篩選",
       "owner": "PM/RD",
       "mins": "15",
-      "note": "三項皆 6/17 已決議，確認排期與上線狀態；每週活動頁面驗收。"
+      "note": "三項皆 6/17 已決議，確認排期與上線狀態；每週活動頁面驗收。跑團核心成員招募＋活動排期（ClickUp 追蹤）。"
     },
     {
       "id": "a6",
       "topic": "產品金流：客製化約會 PRD + Super Like",
       "owner": "產品",
       "mins": "15",
-      "note": "客製化約會 PRD＋收費方式＋prototype 進度；Super Like 0 元刷卡／延遲付款 pre-auth／押金方案 B 技術可行性。"
+      "note": "客製化約會 PRD＋收費＋prototype（ClickUp urgent）；Super Like 0 元刷卡／延遲付款 pre-auth／押金方案 B 技術可行性。"
     },
     {
       "id": "a7",
       "topic": "BD 與行銷對齊",
       "owner": "Jesse/MKT",
       "mins": "10",
-      "note": "板橋兩店 final→通知行銷在地招募；拓店 6 區推進。行銷：女性下載率偏低（CTR 高但下載僅 1/3）→ Meta 女性受眾＋App 名稱訊息；KOC 七月合作。"
+      "note": "板橋兩店 final→在地招募；拓店 6 區；與 WY 完成商家 SOP。行銷：女性下載率偏低（CTR 高、下載僅 1/3）→ Meta 女性受眾＋App 名稱訊息；KOC 七月。"
+    },
+    {
+      "id": "a8",
+      "topic": "數據追蹤 / OKR 校準",
+      "owner": "Jesse/數據",
+      "mins": "10",
+      "note": "PostHog 產品追蹤稽核（盤事件／通知／找缺口）、通知盤點與補齊（Cookie）、競品研究（Whim 死因／First Round／Paktor／Edating）、季度 OKR／北極星校準。"
     }
   ],
   "standups": [
@@ -153,5 +160,5 @@
   ],
   "accepted": [],
   "dismissed": [],
-  "updatedAt": "2026-06-28T15:33:54+08:00"
+  "updatedAt": "2026-06-28T15:41:30+08:00"
 }
