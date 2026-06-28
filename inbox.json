@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-06-27T11:43:12+08:00",
+  "generated_at": "2026-06-28T13:50:19+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1782625819114",
+      "title": "修復配對無故被自動取消（v2 環境）",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "6/27"
+    },
     {
       "id": "ib_1782453038138",
       "title": "修復同性配對篩選錯誤（滑到非同性對象）",
@@ -131,13 +138,6 @@
     {
       "id": "ib_1782211732133",
       "title": "規劃並執行跳過價值觀問答 A/B Test",
-      "cat": "task",
-      "src": "Drive · 6/21 會議",
-      "date": "6/21"
-    },
-    {
-      "id": "ib_1782211732134",
-      "title": "完成 Lava Point 歷史紀錄 API 並上線",
       "cat": "task",
       "src": "Drive · 6/21 會議",
       "date": "6/21"
