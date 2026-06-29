@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T04:11:08+08:00",
+  "generated_at": "2026-06-29T22:26:04+08:00",
   "date": "2026-06-29",
   "week_label": "本週 6/29–7/5",
   "source": "board.json（看板）+ ClickUp 🎯CEO/PM/UI 追蹤",
@@ -10,7 +10,7 @@
     },
     {
       "t": "提升 配對 → 碰面 轉換",
-      "note": "⚠️ 上週成交 0；Super Like 為主要目標之一"
+      "note": "⚠️ 本週成交 0；Super Like 主要目標之一"
     },
     {
       "t": "WAU → 3,000 / MAU → 5,000",
@@ -24,49 +24,45 @@
   "suggested_today": [
     {
       "t": "拆解 match→deposit 漏斗破口、定位流失點並指派負責人",
-      "why": "雙方成交 deposit_both 連 2 週掛 0（上週 0；付訂發起 31 人→雙方付訂 0 人），配對仍健康（上週 193）；需先釐清『約 194 組』與 deposit_both 口徑，列當前第一優先"
+      "why": "deposit_both 連 2 週掛 0（本週 0、上週 0）；付訂發起 31 人→雙方付訂 0 人（funnel 0%），配對仍健康（本週 193）。需先釐清『約 194 組約會』與 deposit_both 口徑。第一優先。"
     },
     {
       "t": "板橋兩間店 final + 通知行銷啟動在地招募",
-      "why": "看板 urgent、due 6/24 已逾期，卡住在地招募啟動（BD）"
-    },
-    {
-      "t": "2.0 上線收尾追蹤（問題回報 / email 5 封 / Lava Point）",
-      "why": "ClickUp urgent、due 6/18 逾期；Lava Point 與付款體驗直接牽動成交漏斗"
+      "why": "看板 urgent、due 6/24 已逾期，卡住在地招募啟動（BD）。"
     },
     {
       "t": "客製化約會 PRD + 收費方式文件 + 介面 prototype",
-      "why": "ClickUp urgent、due 6/24；7 月 P0 新收入功能需定稿才能進開發"
+      "why": "ClickUp urgent、due 6/24；產品金流關鍵，待定稿。"
     },
     {
-      "t": "6/17 週會待拍板：同性別篩選／週末上線／租辦公室／workflow 自動化／HalfCheck UX",
-      "why": "ClickUp urgent、逾期最久（6/17）；多項決議卡關待當場拍板"
+      "t": "2.0 上線收尾追蹤（問題回報 / email 5 封 / Lava Point）",
+      "why": "ClickUp urgent、due 6/18 逾期；含 Lava Point 全額折抵 0 元刷卡付款 bug。"
+    },
+    {
+      "t": "6/17 週會待拍板：同性別篩選 / 週末上線 / 租辦公室 / workflow 自動化 / HalfCheck UX",
+      "why": "ClickUp urgent、due 6/17 逾期；多項決議待最終拍板，阻擋上線排程。"
     }
   ],
   "blockers": [
-    {
-      "t": "雙方成交 deposit_both 連 2 週掛 0；需先釐清『約 194 組約會』與 deposit_both 口徑是否一致再拆漏斗",
-      "owner": "CEO/RD"
-    },
     {
       "t": "Lava Point 全額折抵無法付款（0 元刷卡）",
       "owner": "RD"
     },
     {
-      "t": "點通知導向錯誤（應到聊天室卻跳卡牌）／設定卡牌頁流程中斷",
+      "t": "點通知導向錯誤（應到聊天室卻跳卡牌）",
       "owner": "RD"
     },
     {
-      "t": "Super Like 接收方 0 元刷卡技術問題未解",
-      "owner": "RD/Stan"
+      "t": "設定卡牌頁流程中斷",
+      "owner": "RD"
     },
     {
-      "t": "KYC 正式環境上線狀態待確認、每日真人審核尚未啟動",
-      "owner": "Stan/PM"
+      "t": "deposit_both 口徑待釐清：194 組約會 vs dashboard 雙方成交 0",
+      "owner": "CEO/RD"
     },
     {
-      "t": "Apple Enterprise Program 申請卡關（Halftrack）",
-      "owner": "Stan"
+      "t": "Super Like 0 元刷卡／延遲付款 pre-auth／押金方案 B 技術可行性未定",
+      "owner": "RD"
     }
   ],
   "open_todos": [
@@ -139,11 +135,11 @@
   ],
   "backlog": [
     {
-      "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）",
+      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
       "src": "ClickUp"
     },
     {
-      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
+      "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）",
       "src": "ClickUp"
     },
     {
@@ -153,17 +149,20 @@
   ],
   "carryover": [
     {
-      "t": "訂單紀錄後台 API 收尾（stan；6/25 決議週日～下週一完成，延續追蹤）"
+      "t": "退款說明文字（Miiia）：看板 t1，原 6/24 逾期、仍 doing"
     },
     {
-      "t": "補上 KYC 通知並啟動每日真人審核（stan / cookie）"
+      "t": "板橋兩店 final + 通知行銷在地招募：看板 t2，原 6/24 逾期、仍 doing"
     },
     {
-      "t": "ClickUp 任務看板建立（6/25 標註『尚未完成』）"
+      "t": "每週活動頁面驗收 + 瑜珈/跑團排期：看板 t3，原 6/24 逾期、仍 doing"
     },
     {
-      "t": "PostHog event 串接延續（miiia）"
+      "t": "miiia 訂單紀錄後台 API（6/25 預計週日/下週一完成，待確認）"
+    },
+    {
+      "t": "ClickUp 任務看板建立（6/25 紀錄標註尚未完成）"
     }
   ],
-  "note": "本檔為系統自動產生之立會草稿（每日立會前更新）；資料來源為看板 board.json 與 ClickUp 🎯CEO/PM/UI 追蹤清單。本次排程於 6/28 深夜觸發、跨日後完成，草稿日期定為下一場立會日 6/29（週一），故 week_label 進入新一週；指標／目標數字為最新可得值（board.json／data.json 更新至 6/28）。carryover 取自最近一筆立會紀錄（6/25；6/26–6/28 無紀錄）之未結項。立會時於儀表板「立會」分頁按『↧ 帶入今日草稿』即可生成今日紀錄並直接討論。看板（board.json）由團隊於儀表板維護，本排程僅讀取、不修改。"
+  "note": "本份為系統每日自動草稿（排程於立會前產生）；立會時於儀表板「立會」分頁按『↧ 帶入今日草稿』即可生成今日紀錄、直接討論。資料來源：board.json 看板（人工維護，僅讀取）＋ ClickUp 🎯CEO/PM/UI 追蹤。已去個資（不含電話／Email／用戶全名）。提醒：deposit_both 連 2 週掛 0，今日第一優先為拆解 match→deposit 漏斗。"
 }
