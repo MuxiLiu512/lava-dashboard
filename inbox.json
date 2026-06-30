@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T22:36:08+08:00",
+  "generated_at": "2026-06-30T09:53:47+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
     {
@@ -8,6 +8,13 @@
       "cat": "dept",
       "src": "ClickUp · 全體頻道",
       "date": "6/28"
+    },
+    {
+      "id": "ib_1782784427835",
+      "title": "確認約會資訊頁每日內容相同是否異常",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "6/27"
     },
     {
       "id": "ib_1782743768518",
@@ -132,13 +139,6 @@
       "id": "ib_1782453038142",
       "title": "修復多處 Toast 訊息顯示問題",
       "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/24"
-    },
-    {
-      "id": "ib_1782453038143",
-      "title": "拆分取消約會賠償狀態並修正退款文案",
-      "cat": "task",
       "src": "ClickUp · 全體頻道",
       "date": "6/24"
     }
