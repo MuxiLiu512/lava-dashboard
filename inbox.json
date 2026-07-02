@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-06-30T09:53:47+08:00",
+  "generated_at": "2026-07-02T11:25:14+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1782962714647",
+      "title": "完成活動 breakdown 企劃文件",
+      "cat": "task",
+      "src": "Drive · 7/1 會議",
+      "date": "7/1"
+    },
     {
       "id": "ib_1782743768517",
       "title": "手動推播協助 8 組受影響配對復原",
@@ -131,13 +138,6 @@
     {
       "id": "ib_1782453038141",
       "title": "修復好友卡頁面仍可無原因取消配對",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/24"
-    },
-    {
-      "id": "ib_1782453038142",
-      "title": "修復多處 Toast 訊息顯示問題",
       "cat": "bug",
       "src": "ClickUp · 全體頻道",
       "date": "6/24"
