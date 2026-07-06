@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-07-05T15:13:21+08:00",
+  "generated_at": "2026-07-06T09:31:59+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1783301519165",
+      "title": "調查約會成功卻遭退款的異常事件",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/6"
+    },
+    {
+      "id": "ib_1783301519166",
+      "title": "修復 iPhone 16 Pro 以 Google 註冊閃退",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/6"
+    },
+    {
+      "id": "ib_1783301519167",
+      "title": "檢視並跟進用戶 Feedback 表單",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/6"
+    },
+    {
+      "id": "ib_1783301519168",
+      "title": "調整準備約會 filter 納入已取消狀態與原因",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/5"
+    },
     {
       "id": "ib_1782962714647",
       "title": "完成活動 breakdown 企劃文件",
@@ -113,34 +141,6 @@
       "cat": "bug",
       "src": "ClickUp · 全體頻道",
       "date": "6/27"
-    },
-    {
-      "id": "ib_1782453038138",
-      "title": "修復同性配對篩選錯誤（滑到非同性對象）",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/25"
-    },
-    {
-      "id": "ib_1782453038139",
-      "title": "修復取消約會退款資訊錯亂、付款紀錄空白",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/24"
-    },
-    {
-      "id": "ib_1782453038140",
-      "title": "修復配對後無法直接進入答題流程",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/24"
-    },
-    {
-      "id": "ib_1782453038141",
-      "title": "修復好友卡頁面仍可無原因取消配對",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/24"
     }
   ]
 }
