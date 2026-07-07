@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-07-06T09:31:59+08:00",
+  "generated_at": "2026-07-08T07:35:32+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1783436781473",
+      "title": "新增 HalfCheck 商家端可安排時間",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/7"
+    },
+    {
+      "id": "ib_1783424084752",
+      "title": "檢查配對卡池回歸機制與重複出現問題",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/7"
+    },
+    {
+      "id": "ib_1783361480419",
+      "title": "推送 Order History v2 App 版本",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/7"
+    },
+    {
+      "id": "ib_1783327106882",
+      "title": "修復輸入驗證碼後閃退問題",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/6"
+    },
+    {
+      "id": "ib_1783326949693",
+      "title": "確認 PostHog 15 個事件未回傳資料",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/6"
+    },
     {
       "id": "ib_1783301519165",
       "title": "調查約會成功卻遭退款的異常事件",
@@ -105,41 +140,6 @@
       "title": "推進海巡回應與貼文生成自動化",
       "cat": "task",
       "src": "Drive · 6/27 會議",
-      "date": "6/27"
-    },
-    {
-      "id": "ib_1782743768526",
-      "title": "洽談婚友社聯名與跑團合作",
-      "cat": "dept",
-      "src": "Drive · 6/27 會議",
-      "date": "6/27"
-    },
-    {
-      "id": "ib_1782743768527",
-      "title": "改回 Halfway 信箱寄送 Email",
-      "cat": "task",
-      "src": "Drive · 6/27 會議",
-      "date": "6/27"
-    },
-    {
-      "id": "ib_1782743768528",
-      "title": "達成 7 場館合作並跟進板橋店家",
-      "cat": "dept",
-      "src": "Drive · 6/27 會議",
-      "date": "6/27"
-    },
-    {
-      "id": "ib_1782743768529",
-      "title": "提高每日滑卡上限 20→30",
-      "cat": "task",
-      "src": "Drive · 6/27 會議",
-      "date": "6/27"
-    },
-    {
-      "id": "ib_1782625819114",
-      "title": "修復配對無故被自動取消（v2 環境）",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
       "date": "6/27"
     }
   ]
