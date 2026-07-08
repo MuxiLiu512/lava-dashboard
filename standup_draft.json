@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-07-07T22:05:59+08:00",
-  "date": "2026-07-07",
+  "generated_at": "2026-07-08T22:05:00+08:00",
+  "date": "2026-07-08",
   "week_label": "本週 7/6–7/12",
   "source": "board.json（看板）+ ClickUp 🎯CEO/PM/UI 追蹤",
   "week_goals": [
     {
       "t": "女性用戶占比 → 50%",
-      "note": "看板 23%（自 17% 提升）；data.json 本週活躍女性佔 20.1%（171 人，較上週 222 下滑）；仍為核心增長缺口"
+      "note": "看板 23%（自 17% 提升）；data.json 最後完整週（6/28）活躍女性 171 人、佔 20.0%，較上週 222 下滑；仍為核心增長缺口"
     },
     {
       "t": "提升 配對 → 碰面 轉換",
-      "note": "⚠️ 本週雙方成交 0、連 3 週掛 0；Super Like 主要目標之一"
+      "note": "⚠️ deposit_both 自 6/14 起連 4 週掛 0；Super Like 主要目標之一"
     },
     {
       "t": "WAU → 3,000 / MAU → 5,000",
-      "note": "看板值 WAU ~993；data.json 最新 MAU 3,892（已破月目標路徑）、本週 WAU 累積中（週日 7/5 起）"
+      "note": "data.json：本週 WAU 累積 1,181（週日 7/5 起；上週整週 2,503 異常偏高，宜確認口徑）、MAU 4,374（30 天滾動）"
     },
     {
       "t": "每月成功完成約會場次（北極星）",
-      "note": "累計 66，近 3 週停滯（deposit_both 連 3 週掛 0）"
+      "note": "累計 66，近 4 週停滯（deposit_both 連 4 週 0）；6/28 週會另提『累計約會 194 組』，口徑待對齊"
     }
   ],
   "suggested_today": [
     {
       "t": "拆解 match→deposit 漏斗破口、定位流失點並指派負責人",
-      "why": "data.json：本週雙方成交 0、連 3 週掛 0；漏斗最大破口為『付訂發起→雙方付訂』0%（31 人發起、0 人完成），北極星停滯主因，固定列今日第一優先"
+      "why": "data.json：雙方成交連 4 週掛 0；近 30 天漏斗『付訂發起→雙方付訂』27 人發起、0 人完成（0%），北極星停滯主因，固定列今日第一優先"
     },
     {
       "t": "板橋兩間店 final + 通知行銷啟動在地招募",
-      "why": "看板 urgent（BD，原訂 6/24 逾期）；final 後才能啟動在地招募與拓店節奏"
+      "why": "看板 urgent（BD，原訂 6/24 已逾期兩週）；final 後才能啟動在地招募與拓店節奏"
     },
     {
       "t": "客製化約會 PRD + 收費方式文件 + 介面 prototype",
@@ -40,123 +40,49 @@
     },
     {
       "t": "6/17 週會待拍板項目定案（同性別篩選 / 週末上線 / 租辦公室 / workflow 自動化 / HalfCheck UX）",
-      "why": "ClickUp urgent（原 6/17 逾期）；多項決議懸置，阻擋後續排程與上線"
+      "why": "ClickUp urgent（原 6/17 逾期三週）；多項後續排程被此卡住，建議今日當場拍板"
+    },
+    {
+      "t": "註冊完成率走低 + 女性活躍下滑：確認行銷/Onboarding 對策",
+      "why": "data.json：註冊開始→完成 41.6%（上期 52.1%）、女性活躍 171（上週 222）；與女性占比 50% 目標背離"
     }
   ],
   "blockers": [
     {
-      "t": "雙方成交 deposit_both 連 3 週掛 0；需先釐清『約 194 組配對』與 dashboard『雙方成交』口徑是否一致",
+      "t": "付款 bug 未清：Lava Point 全額折抵 0 元無法刷卡 / 點通知導向錯誤 / 設定卡牌頁流程中斷",
+      "owner": "RD"
+    },
+    {
+      "t": "Super Like 0 元刷卡 / 延遲付款 pre-auth / 押金方案 B 技術可行性未定",
+      "owner": "RD/產品"
+    },
+    {
+      "t": "『累計約會 194 組』vs dashboard deposit_both=0 口徑未對齊，成交數據無法判讀",
       "owner": "CEO/RD"
-    },
-    {
-      "t": "付款 bug：Lava Point 全額折抵無法付款（0 元刷卡）",
-      "owner": "RD"
-    },
-    {
-      "t": "點通知導向錯誤（應到聊天室卻跳卡牌）＋ 設定卡牌頁流程中斷",
-      "owner": "RD"
-    },
-    {
-      "t": "Super Like 0 元刷卡／延遲付款 pre-auth／押金方案技術可行性未定",
-      "owner": "RD"
-    },
-    {
-      "t": "Apple Enterprise Program 申請卡關",
-      "owner": "Jesse"
     }
   ],
   "open_todos": [
-    {
-      "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）",
-      "owner": "Jesse",
-      "due": "6/24",
-      "src": "看板"
-    },
-    {
-      "t": "每週活動功能頁面驗收 + 瑜珈/跑團排期",
-      "owner": "Jesse+WY",
-      "due": "6/24",
-      "src": "看板"
-    },
-    {
-      "t": "拓店 6 區：台北/新北/桃園/台中/台南/高雄",
-      "owner": "Jesse",
-      "due": "7月",
-      "src": "看板"
-    },
-    {
-      "t": "與 SitDown 溝通拍攝餐點費用分擔",
-      "owner": "Cookie",
-      "due": "",
-      "src": "看板"
-    },
-    {
-      "t": "PostHog 產品追蹤稽核（盤事件 / 通知 / 找缺口）",
-      "owner": "Jesse",
-      "due": "6/28",
-      "src": "ClickUp"
-    },
-    {
-      "t": "每週實體活動：跑團核心成員招募 + 活動排期",
-      "owner": "Jesse",
-      "due": "6/27",
-      "src": "ClickUp"
-    },
-    {
-      "t": "海巡機器人：資料源改 Sheet/API、解 manager.lava.tw 讀取痛點",
-      "owner": "Jesse",
-      "due": "6/26",
-      "src": "ClickUp"
-    },
-    {
-      "t": "校準季度 OKR / 北極星指標",
-      "owner": "Jesse",
-      "due": "6/26",
-      "src": "ClickUp"
-    },
-    {
-      "t": "通知（Notification）盤點與補齊（進行中）",
-      "owner": "Cookie",
-      "due": "6/24",
-      "src": "ClickUp"
-    },
-    {
-      "t": "與 WY 完成商家協助 SOP 並教育合作店家",
-      "owner": "Jesse",
-      "due": "6/24",
-      "src": "ClickUp"
-    },
-    {
-      "t": "Halfway 應收應付 / 各專案利潤 / Celia 分潤盤點",
-      "owner": "Jesse",
-      "due": "6/23",
-      "src": "ClickUp"
-    }
+    { "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）", "owner": "Jesse", "due": "6/24", "src": "看板" },
+    { "t": "每週活動功能頁面驗收 + 瑜珈/跑團排期", "owner": "Jesse+WY", "due": "6/24", "src": "看板" },
+    { "t": "拓店 6 區：台北/新北/桃園/台中/台南/高雄", "owner": "Jesse", "due": "7月", "src": "看板" },
+    { "t": "PostHog 產品追蹤稽核（盤事件 / 通知 / 找缺口）", "owner": "Jesse", "due": "6/28", "src": "ClickUp" },
+    { "t": "每週實體活動：跑團核心成員招募 + 活動排期", "owner": "Jesse", "due": "6/27", "src": "ClickUp" },
+    { "t": "海巡機器人：資料源改 Sheet/API、解 manager.lava.tw 讀取痛點", "owner": "Jesse", "due": "6/26", "src": "ClickUp" },
+    { "t": "校準季度 OKR / 北極星指標", "owner": "Jesse", "due": "6/26", "src": "ClickUp" },
+    { "t": "通知（Notification）盤點與補齊（進行中）", "owner": "Cookie", "due": "6/24", "src": "ClickUp" },
+    { "t": "與 WY 完成商家協助 SOP 並教育合作店家", "owner": "Jesse", "due": "6/24", "src": "ClickUp" },
+    { "t": "Halfway 應收應付 / 各專案利潤 / Celia 分潤盤點", "owner": "Jesse", "due": "6/23", "src": "ClickUp" }
   ],
   "backlog": [
-    {
-      "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）",
-      "src": "ClickUp"
-    },
-    {
-      "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating",
-      "src": "ClickUp"
-    },
-    {
-      "t": "學習 Hermes Agent 使用方式",
-      "src": "ClickUp"
-    }
+    { "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating", "src": "ClickUp" },
+    { "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）", "src": "ClickUp" },
+    { "t": "學習 Hermes Agent 使用方式", "src": "ClickUp" },
+    { "t": "與 SitDown 溝通拍攝餐點費用分擔", "src": "看板" }
   ],
   "carryover": [
-    {
-      "t": "ClickUp 任務 dashboard 建立（6/25 立會記為『尚未完成』）"
-    },
-    {
-      "t": "補上 KYC 通知並啟動每日真人審核（WY／Jesse／Cookie）"
-    },
-    {
-      "t": "PostHog event 串接 / 產品追蹤稽核收尾"
-    }
+    { "t": "拆解 match→deposit 漏斗破口（deposit_both 連 4 週 0，昨日草稿第一優先仍未結）" },
+    { "t": "板橋兩間店 final + 通知行銷啟動在地招募（urgent，持續逾期）" },
+    { "t": "客製化約會 PRD + 收費 + prototype（ClickUp urgent，持續逾期）" }
   ],
-  "note": "系統自動草稿（來源：board.json 看板 + ClickUp 🎯CEO/PM/UI 追蹤）。立會時於儀表板『立會』分頁按『↧ 帶入今日草稿』即可生成今日紀錄並直接討論。最近一筆看板立會紀錄為 6/25，carryover 取自該筆未結項；ClickUp 追蹤項多已逾期（原訂 6/17–6/28），請於會中確認實際狀態。"
+  "note": "此為系統自動草稿（7/8 22:05 產生）。看板 standups 最近一筆為 6/25，昨日（7/7）無立會紀錄，carryover 改列當前最關鍵未結項。立會時請在儀表板「立會」分頁按『↧ 帶入今日草稿』生成今日紀錄。"
 }
