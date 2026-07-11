@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-07-10T12:11:34+08:00",
+  "generated_at": "2026-07-11T14:17:28+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1783750648551",
+      "title": "排查 Meta 帳號登入不進去問題",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/11"
+    },
+    {
+      "id": "ib_1783750648552",
+      "title": "檢測並優化強制 KYC 流程",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/10"
+    },
+    {
+      "id": "ib_1783750648553",
+      "title": "新增卡池讀取頁面",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/10"
+    },
+    {
+      "id": "ib_1783750648554",
+      "title": "新增二擇一配對檢舉後處理流程",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/10"
+    },
+    {
+      "id": "ib_1783750648555",
+      "title": "整理資料庫 schema 找出洞見",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/10"
+    },
     {
       "id": "ib_1783608873347",
       "title": "跟進颱風影響兩組約會改期至7/12與7/16",
@@ -106,41 +141,6 @@
       "cat": "bug",
       "src": "ClickUp · 全體頻道",
       "date": "7/6"
-    },
-    {
-      "id": "ib_1783301519166",
-      "title": "修復 iPhone 16 Pro 以 Google 註冊閃退",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/6"
-    },
-    {
-      "id": "ib_1783301519167",
-      "title": "檢視並跟進用戶 Feedback 表單",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/6"
-    },
-    {
-      "id": "ib_1783301519168",
-      "title": "調整準備約會 filter 納入已取消狀態與原因",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/5"
-    },
-    {
-      "id": "ib_1782962714647",
-      "title": "完成活動 breakdown 企劃文件",
-      "cat": "task",
-      "src": "Drive · 7/1 會議",
-      "date": "7/1"
-    },
-    {
-      "id": "ib_1782743768517",
-      "title": "手動推播協助 8 組受影響配對復原",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "6/28"
     }
   ]
 }
