@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-07-11T14:17:28+08:00",
+  "generated_at": "2026-07-12T07:35:56+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1783812956000",
+      "title": "核對三筆假到場通知不一致並同步商家群組",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/11"
+    },
+    {
+      "id": "ib_1783812956001",
+      "title": "排查用戶回報約會被取消的異常",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/11"
+    },
+    {
+      "id": "ib_1783812956002",
+      "title": "確認逾期退款仍顯示退款中問題",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/11"
+    },
+    {
+      "id": "ib_1783812956003",
+      "title": "上傳 event/notification 表單至 Google Drive",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/11"
+    },
     {
       "id": "ib_1783750648551",
       "title": "排查 Meta 帳號登入不進去問題",
@@ -113,34 +141,6 @@
       "cat": "bug",
       "src": "ClickUp · 全體頻道",
       "date": "7/7"
-    },
-    {
-      "id": "ib_1783361480419",
-      "title": "推送 Order History v2 App 版本",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/7"
-    },
-    {
-      "id": "ib_1783327106882",
-      "title": "修復輸入驗證碼後閃退問題",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/6"
-    },
-    {
-      "id": "ib_1783326949693",
-      "title": "確認 PostHog 15 個事件未回傳資料",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/6"
-    },
-    {
-      "id": "ib_1783301519165",
-      "title": "調查約會成功卻遭退款的異常事件",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/6"
     }
   ]
 }
