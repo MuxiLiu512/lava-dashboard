@@ -1,49 +1,51 @@
 {
-  "generated_at": "2026-07-11T00:00:00+08:00",
-  "date": "2026-07-11",
+  "generated_at": "2026-07-12T22:05:00+08:00",
+  "date": "2026-07-12",
   "week_label": "本週 7/6–7/12",
   "source": "board.json（看板）+ ClickUp 🎯CEO/PM/UI 追蹤",
   "week_goals": [
     { "t": "女性用戶占比 → 50%", "note": "現 23%（自 17% 提升）；仍為核心增長缺口" },
     { "t": "提升 配對 → 碰面 轉換", "note": "⚠️ deposit_both 自 6/14 起連 4 週掛 0；Super Like 主要目標之一" },
-    { "t": "WAU → 3,000 / MAU → 5,000", "note": "最新：WAU 本週累積 1,700（上週 2,505）、MAU 4,586" },
-    { "t": "每月成功完成約會場次（北極星）", "note": "累計 66；近一個月停滯" }
+    { "t": "WAU → 3,000 / MAU → 5,000", "note": "WAU 本週累積 1,700、MAU 4,586（30 天滾動）" },
+    { "t": "每月成功完成約會場次（北極星）", "note": "累計 66，近數週停滯" }
   ],
   "suggested_today": [
-    { "t": "拆解 match→deposit 漏斗破口、定位流失點並指派負責人", "why": "雙方成交連 4 週掛 0；漏斗顯示付訂發起→雙方付訂 0%（20 人發起、0 完成），第一優先" },
+    { "t": "拆解 match→deposit 漏斗破口、定位流失點並指派負責人", "why": "deposit_both 連 4 週掛 0，配對量健康但成交卡死，第一優先" },
+    { "t": "🔴 P0：核對 7/3、7/4 兩場疑「誤判 No-show」沒收押金", "why": "用戶信任風險，ClickUp urgent，直接影響押金機制口碑" },
     { "t": "客製化約會 PRD + 收費方式文件 + 介面 prototype", "why": "ClickUp urgent，原 6/24 到期已逾期" },
-    { "t": "2.0 上線收尾追蹤（問題回報 / email 5 封 / Lava Point）", "why": "ClickUp urgent，原 6/18 到期，逐項確認是否已清" },
-    { "t": "板橋兩間店 final + 通知行銷啟動在地招募", "why": "看板 urgent（原 6/24），BD→行銷銜接卡在此項" },
-    { "t": "🔴 週會待拍板：同性別篩選 / 週末上線 / 租辦公室 / workflow 自動化 / HalfCheck UX", "why": "ClickUp urgent，6/17 起懸而未決，需當場拍板" }
+    { "t": "板橋兩間店 final + 通知行銷啟動在地招募", "why": "看板 urgent，原 6/24 到期，卡行銷在地招募啟動" },
+    { "t": "2.0 上線收尾追蹤（問題回報 / email 5 封 / Lava Point）", "why": "ClickUp urgent，原 6/18 到期，收尾 bug 仍疊在漏斗上" },
+    { "t": "🔴 6/17 週會待拍板：同性別篩選 / 週末上線 / 租辦公室 / workflow 自動化 / HalfCheck UX", "why": "ClickUp urgent，決議懸置近一個月，阻塞下游排期" }
   ],
   "blockers": [
+    { "t": "deposit_both 持續掛 0：口徑（194 組 vs 雙方成交）尚未釐清", "owner": "CEO/RD" },
     { "t": "Lava Point 全額折抵無法付款（0 元刷卡）", "owner": "RD" },
-    { "t": "點通知導向錯誤（應到聊天室卻跳卡牌）", "owner": "RD" },
-    { "t": "設定卡牌頁流程中斷", "owner": "RD" },
-    { "t": "「累計約會 194 組」與 dashboard deposit_both=0 口徑不一致，待釐清", "owner": "CEO/RD" }
+    { "t": "點通知導向錯誤（應到聊天室卻跳卡牌）＋ 設定卡牌頁流程中斷", "owner": "RD" }
   ],
   "open_todos": [
     { "t": "發起/接受邀約畫面新增退款說明文字（給 Miiia）", "owner": "Jesse", "due": "6/24", "src": "看板" },
     { "t": "每週活動功能頁面驗收 + 瑜珈/跑團排期", "owner": "Jesse+WY", "due": "6/24", "src": "看板" },
     { "t": "拓店 6 區：台北/新北/桃園/台中/台南/高雄", "owner": "Jesse", "due": "7月", "src": "看板" },
-    { "t": "PostHog 產品追蹤稽核（盤事件 / 通知 / 找缺口）", "owner": "Jesse", "due": "6/28", "src": "ClickUp" },
+    { "t": "通知（Notification）盤點與補齊", "owner": "Cookie", "due": "6/24", "src": "ClickUp" },
+    { "t": "與 WY 完成商家協助 SOP 並教育合作店家", "owner": "Jesse", "due": "6/24", "src": "ClickUp" },
     { "t": "每週實體活動：跑團核心成員招募 + 活動排期", "owner": "Jesse", "due": "6/27", "src": "ClickUp" },
+    { "t": "PostHog 產品追蹤稽核（盤事件 / 通知 / 找缺口）", "owner": "Jesse", "due": "6/28", "src": "ClickUp" },
     { "t": "海巡機器人：資料源改 Sheet/API、解 manager.lava.tw 讀取痛點", "owner": "Jesse", "due": "6/26", "src": "ClickUp" },
     { "t": "校準季度 OKR / 北極星指標", "owner": "Jesse", "due": "6/26", "src": "ClickUp" },
-    { "t": "通知（Notification）盤點與補齊（進行中）", "owner": "Cookie", "due": "6/24", "src": "ClickUp" },
-    { "t": "與 WY 完成商家協助 SOP 並教育合作店家", "owner": "Jesse", "due": "6/24", "src": "ClickUp" },
-    { "t": "Halfway 應收應付 / 各專案利潤 / 分潤盤點", "owner": "Jesse", "due": "6/23", "src": "ClickUp" }
+    { "t": "Halfway 應收應付 / 各專案利潤 / Celia 分潤盤點", "owner": "Jesse", "due": "6/23", "src": "ClickUp" },
+    { "t": "🏛 董事會簡報｜7/12 稽核後四案決議（2 proceed／1 iterate／1 待補檢核）", "owner": "Jesse", "due": "-", "src": "ClickUp" },
+    { "t": "📘 週會｜過 Product Wiki 待確認清單（24 條：🔴4／🟡9／🟢11）", "owner": "Jesse", "due": "-", "src": "ClickUp" }
   ],
   "backlog": [
-    { "t": "與 SitDown 溝通拍攝餐點費用分擔（Cookie）", "src": "看板" },
-    { "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）", "src": "ClickUp" },
     { "t": "競品研究：Whim 死因 / First Round On Me / Paktor Premium / Edating", "src": "ClickUp" },
-    { "t": "學習 Hermes Agent 使用方式", "src": "ClickUp" }
+    { "t": "書妍股份 / 負責人 / 各公司銀行匯款資料變更（備小章）", "src": "ClickUp" },
+    { "t": "學習 Hermes Agent 使用方式", "src": "ClickUp" },
+    { "t": "與 SitDown 溝通拍攝餐點費用分擔", "src": "看板" }
   ],
   "carryover": [
-    { "t": "拆解雙方成交（deposit_both）連 4 週掛 0 的漏斗破口" },
-    { "t": "確認 KYC 每日真人審核（WY／Jesse／Cookie）是否持續運轉" },
-    { "t": "板橋兩店 final → 通知行銷啟動在地招募" }
+    { "t": "拆解 deposit_both 掛 0 破口（6/28 週會第一優先，至今未結）" },
+    { "t": "逾期交付：退款說明文字（Miiia）＋ 每週活動頁面驗收（原 6/24）" },
+    { "t": "KYC 每日真人審核例行化（WY／Jesse／Cookie）與正式環境狀態確認" }
   ],
-  "note": "系統自動草稿（board.json 立會紀錄最近一筆為 6/25，昨日無紀錄，延續項改列當前最關鍵未結項）。立會時在「立會」分頁按「↧ 帶入今日草稿」生成今日紀錄。"
+  "note": "系統自動草稿（board.json 最後更新 6/28，昨日無立會紀錄，延續項取自最近一次紀錄與未結重點）。立會時按「↧ 帶入今日草稿」生成今日紀錄。"
 }
