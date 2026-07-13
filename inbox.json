@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-07-12T07:35:56+08:00",
+  "generated_at": "2026-07-13T08:15:00+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1783921892459",
+      "title": "新增 HalfCheck 指派商家自動篩選",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892460",
+      "title": "處理取消後 Pending 邀約時間顯示",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892461",
+      "title": "開通 TablePlus DB 存取以核對 PostHog 差異",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892462",
+      "title": "更新雙平台上架圖以反映新介面",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892463",
+      "title": "新增 HalfCheck 後台 Lava Points 空投系統",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
     {
       "id": "ib_1783812956000",
       "title": "核對三筆假到場通知不一致並同步商家群組",
@@ -106,41 +141,6 @@
       "cat": "dept",
       "src": "ClickUp · 全體頻道",
       "date": "7/8"
-    },
-    {
-      "id": "ib_1783522631909",
-      "title": "改用 hwstud.io 信箱發送用戶提醒信件",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/8"
-    },
-    {
-      "id": "ib_1783520671186",
-      "title": "確認 7/8 場次通知不一致（假到場）並核對商家群組",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/8"
-    },
-    {
-      "id": "ib_1783504743691",
-      "title": "評估支援約會改期、免重新發起邀約",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/8"
-    },
-    {
-      "id": "ib_1783436781473",
-      "title": "新增 HalfCheck 商家端可安排時間",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/7"
-    },
-    {
-      "id": "ib_1783424084752",
-      "title": "檢查配對卡池回歸機制與重複出現問題",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/7"
     }
   ]
 }
