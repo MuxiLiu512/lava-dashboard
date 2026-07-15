@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-07-13T08:15:00+08:00",
+  "generated_at": "2026-07-16T07:35:00+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1784158511113",
+      "title": "新增退回原刷卡機構的退款選項",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/15"
+    },
+    {
+      "id": "ib_1784158511114",
+      "title": "排查 Halfcheck 與表單約會狀態不一致",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/14"
+    },
     {
       "id": "ib_1783921892459",
       "title": "新增 HalfCheck 指派商家自動篩選",
@@ -127,20 +141,6 @@
       "cat": "dept",
       "src": "ClickUp · 全體頻道",
       "date": "7/9"
-    },
-    {
-      "id": "ib_1783525350935",
-      "title": "審閱 Lava Revamp 設計稿並開票",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/8"
-    },
-    {
-      "id": "ib_1783522692860",
-      "title": "調整配對卡牌回歸間隔至 15 天",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/8"
     }
   ]
 }
