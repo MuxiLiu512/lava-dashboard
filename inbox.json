@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-07-16T07:35:00+08:00",
+  "generated_at": "2026-07-17T07:35:53+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1784244945445",
+      "title": "測試新版 build 的 bottom sheet 與特價 banner",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/16"
+    },
     {
       "id": "ib_1784158511113",
       "title": "新增退回原刷卡機構的退款選項",
@@ -131,13 +138,6 @@
     {
       "id": "ib_1783531627276",
       "title": "更新問卷內容 UI 設計",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/9"
-    },
-    {
-      "id": "ib_1783528794969",
-      "title": "新增滑卡提示語：認真滑 3 天後獲得客製化推薦",
       "cat": "dept",
       "src": "ClickUp · 全體頻道",
       "date": "7/9"
