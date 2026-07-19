@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-07-18T07:35:00+08:00",
+  "generated_at": "2026-07-19T08:13:07+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1784419987643",
+      "title": "修改價值觀問題回答 UI",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/18"
+    },
     {
       "id": "ib_1784244945445",
       "title": "測試新版 build 的 bottom sheet 與特價 banner",
@@ -133,13 +140,6 @@
       "title": "追蹤颱風文私訊並致電協助用戶改期",
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
-      "date": "7/9"
-    },
-    {
-      "id": "ib_1783531627276",
-      "title": "更新問卷內容 UI 設計",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
       "date": "7/9"
     }
   ]
