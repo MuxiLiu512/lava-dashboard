@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-07-21T08:50:32+08:00",
+  "generated_at": "2026-07-22T08:31:03+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1784680263878",
+      "title": "確認 cleanboy 系列 IG 圖稿是否定稿",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/21"
+    },
+    {
+      "id": "ib_1784680263879",
+      "title": "規劃 IG/Threads 三主題輪播內容策略",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/21"
+    },
+    {
+      "id": "ib_1784680263880",
+      "title": "製作教男生約會相處與放照片的特輯",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/21"
+    },
     {
       "id": "ib_1784419987643",
       "title": "修改價值觀問題回答 UI",
@@ -120,27 +141,6 @@
       "cat": "dept",
       "src": "ClickUp · 全體頻道",
       "date": "7/10"
-    },
-    {
-      "id": "ib_1783750648555",
-      "title": "整理資料庫 schema 找出洞見",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/10"
-    },
-    {
-      "id": "ib_1783608873347",
-      "title": "跟進颱風影響兩組約會改期至7/12與7/16",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/9"
-    },
-    {
-      "id": "ib_1783575658045",
-      "title": "追蹤颱風文私訊並致電協助用戶改期",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/9"
     }
   ]
 }
