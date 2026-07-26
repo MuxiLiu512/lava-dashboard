@@ -1,26 +1,146 @@
 {
-  "generated_at": "2026-07-25T07:55:00+08:00",
+  "generated_at": "2026-07-26T12:58:56+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
-    {"id":"ib_1784921944375","title":"修復個人資料 API 快取導致編輯後未更新","cat":"bug","src":"ClickUp · 全體頻道","date":"7/25"},
-    {"id":"ib_1784801800121","title":"排查 Meta Pixel 事件不活躍與數據落差","cat":"bug","src":"ClickUp · 全體頻道","date":"7/23"},
-    {"id":"ib_1784741479431","title":"設計 Chatroom 空狀態頁面","cat":"dept","src":"ClickUp · 全體頻道","date":"7/23"},
-    {"id":"ib_1784736999181","title":"排查 3 筆商家漏通知並確認 n8n 同步","cat":"task","src":"ClickUp · 約會資訊頻道","date":"7/23"},
-    {"id":"ib_1784716129898","title":"核實幽靈帳號問題","cat":"bug","src":"ClickUp · 全體頻道","date":"7/22"},
-    {"id":"ib_1784680263878","title":"確認 cleanboy 系列 IG 圖稿是否定稿","cat":"task","src":"ClickUp · 全體頻道","date":"7/21"},
-    {"id":"ib_1784680263879","title":"規劃 IG/Threads 三主題輪播內容策略","cat":"task","src":"ClickUp · 全體頻道","date":"7/21"},
-    {"id":"ib_1784680263880","title":"製作教男生約會相處與放照片的特輯","cat":"task","src":"ClickUp · 全體頻道","date":"7/21"},
-    {"id":"ib_1784419987643","title":"修改價值觀問題回答 UI","cat":"dept","src":"ClickUp · 全體頻道","date":"7/18"},
-    {"id":"ib_1784244945445","title":"測試新版 build 的 bottom sheet 與特價 banner","cat":"task","src":"ClickUp · 全體頻道","date":"7/16"},
-    {"id":"ib_1784158511113","title":"新增退回原刷卡機構的退款選項","cat":"dept","src":"ClickUp · 全體頻道","date":"7/15"},
-    {"id":"ib_1784158511114","title":"排查 Halfcheck 與表單約會狀態不一致","cat":"bug","src":"ClickUp · 全體頻道","date":"7/14"},
-    {"id":"ib_1783921892459","title":"新增 HalfCheck 指派商家自動篩選","cat":"dept","src":"ClickUp · 全體頻道","date":"7/12"},
-    {"id":"ib_1783921892460","title":"處理取消後 Pending 邀約時間顯示","cat":"bug","src":"ClickUp · 全體頻道","date":"7/12"},
-    {"id":"ib_1783921892461","title":"開通 TablePlus DB 存取以核對 PostHog 差異","cat":"dept","src":"ClickUp · 全體頻道","date":"7/12"},
-    {"id":"ib_1783921892462","title":"更新雙平台上架圖以反映新介面","cat":"task","src":"ClickUp · 全體頻道","date":"7/12"},
-    {"id":"ib_1783921892463","title":"新增 HalfCheck 後台 Lava Points 空投系統","cat":"dept","src":"ClickUp · 全體頻道","date":"7/12"},
-    {"id":"ib_1783812956000","title":"核對三筆假到場通知不一致並同步商家群組","cat":"task","src":"ClickUp · 約會資訊頻道","date":"7/11"},
-    {"id":"ib_1783812956001","title":"排查用戶回報約會被取消的異常","cat":"bug","src":"ClickUp · 全體頻道","date":"7/11"},
-    {"id":"ib_1783812956002","title":"確認逾期退款仍顯示退款中問題","cat":"bug","src":"ClickUp · 全體頻道","date":"7/11"}
+    {
+      "id": "ib_1784921944375",
+      "title": "修復個人資料 API 快取導致編輯後未更新",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/25"
+    },
+    {
+      "id": "ib_1784801800121",
+      "title": "排查 Meta Pixel 事件不活躍與數據落差",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/23"
+    },
+    {
+      "id": "ib_1784741479431",
+      "title": "設計 Chatroom 空狀態頁面",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/23"
+    },
+    {
+      "id": "ib_1784736999181",
+      "title": "排查 3 筆商家漏通知並確認 n8n 同步",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/23"
+    },
+    {
+      "id": "ib_1784716129898",
+      "title": "核實幽靈帳號問題",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/22"
+    },
+    {
+      "id": "ib_1784680263878",
+      "title": "確認 cleanboy 系列 IG 圖稿是否定稿",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/21"
+    },
+    {
+      "id": "ib_1784680263879",
+      "title": "規劃 IG/Threads 三主題輪播內容策略",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/21"
+    },
+    {
+      "id": "ib_1784680263880",
+      "title": "製作教男生約會相處與放照片的特輯",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/21"
+    },
+    {
+      "id": "ib_1784419987643",
+      "title": "修改價值觀問題回答 UI",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/18"
+    },
+    {
+      "id": "ib_1784244945445",
+      "title": "測試新版 build 的 bottom sheet 與特價 banner",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/16"
+    },
+    {
+      "id": "ib_1784158511113",
+      "title": "新增退回原刷卡機構的退款選項",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/15"
+    },
+    {
+      "id": "ib_1784158511114",
+      "title": "排查 Halfcheck 與表單約會狀態不一致",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/14"
+    },
+    {
+      "id": "ib_1783921892459",
+      "title": "新增 HalfCheck 指派商家自動篩選",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892460",
+      "title": "處理取消後 Pending 邀約時間顯示",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892461",
+      "title": "開通 TablePlus DB 存取以核對 PostHog 差異",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892462",
+      "title": "更新雙平台上架圖以反映新介面",
+      "cat": "task",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783921892463",
+      "title": "新增 HalfCheck 後台 Lava Points 空投系統",
+      "cat": "dept",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/12"
+    },
+    {
+      "id": "ib_1783812956000",
+      "title": "核對三筆假到場通知不一致並同步商家群組",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/11"
+    },
+    {
+      "id": "ib_1783812956001",
+      "title": "排查用戶回報約會被取消的異常",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/11"
+    },
+    {
+      "id": "ib_1783812956002",
+      "title": "確認逾期退款仍顯示退款中問題",
+      "cat": "bug",
+      "src": "ClickUp · 全體頻道",
+      "date": "7/11"
+    }
   ]
 }
