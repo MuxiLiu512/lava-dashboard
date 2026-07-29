@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T08:09:37+08:00",
-  "source": "PostHog 98614（7/28 排程：PostHog MCP 未連線、無 API key，指標沿用 7/11 快照）+ Marketing Report（CPI，7/28 檢查：試算表 7/12 起仍無新資料，維持 7/5–7/11 週期）",
+  "generated_at": "2026-07-29T11:32:44+08:00",
+  "source": "PostHog 98614（7/29 排程：PostHog MCP 未連線、無 API key，指標沿用 7/11 快照）+ Marketing Report（CPI，7/29 檢查：試算表 7/12 起仍無新資料，維持 7/5–7/11 週期）",
   "north_star": {
     "label": "累計碰面組數",
     "value": "66",
