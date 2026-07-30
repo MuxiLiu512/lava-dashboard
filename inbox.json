@@ -1,7 +1,91 @@
 {
-  "generated_at": "2026-07-29T11:35:00+08:00",
+  "generated_at": "2026-07-30T11:40:00+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1785372834001",
+      "title": "建立 Ditto LINE channel 並拍板 hosting",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834002",
+      "title": "發送 concierge 暖名單 DM ×5 並記錄回覆",
+      "cat": "dept",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834003",
+      "title": "交付律師材料包並通過 8/7 gate",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834004",
+      "title": "請 Stan 說明付款修復部署時間",
+      "cat": "dept",
+      "src": "Drive · 8/2 週會前報告",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834005",
+      "title": "定稿商家通知 SOP",
+      "cat": "task",
+      "src": "Drive · 8/2 週會前報告",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834006",
+      "title": "Triage 14 筆 C/D/E 遺留 mapping 案",
+      "cat": "task",
+      "src": "Drive · 8/2 週會前報告",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834007",
+      "title": "正名「柯子花約會」誤植",
+      "cat": "task",
+      "src": "Drive · 8/2 週會前報告",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834008",
+      "title": "完成 Whisper 轉譯管線測試",
+      "cat": "task",
+      "src": "Drive · 8/2 週會前報告",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834009",
+      "title": "走查邀約全流程 8–10 節點圖譜",
+      "cat": "task",
+      "src": "Drive · 8/2 週會前報告",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834010",
+      "title": "撰寫 superlike 規則與通知觸發需求初稿",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道 SyncUp",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834011",
+      "title": "擬定 KYC 影響功能限制與曝光政策",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道 SyncUp",
+      "date": "7/29"
+    },
+    {
+      "id": "ib_1785372834012",
+      "title": "提出多語言協作與翻譯支援方案",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道 SyncUp",
+      "date": "7/29"
+    },
     {
       "id": "ib_1785195348001",
       "title": "實作 APP 內字體大小上限設定",
@@ -57,90 +141,6 @@
       "cat": "bug",
       "src": "ClickUp · 全體頻道",
       "date": "7/22"
-    },
-    {
-      "id": "ib_1784680263878",
-      "title": "確認 cleanboy 系列 IG 圖稿是否定稿",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/21"
-    },
-    {
-      "id": "ib_1784680263879",
-      "title": "規劃 IG/Threads 三主題輪播內容策略",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/21"
-    },
-    {
-      "id": "ib_1784680263880",
-      "title": "製作教男生約會相處與放照片的特輯",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/21"
-    },
-    {
-      "id": "ib_1784419987643",
-      "title": "修改價值觀問題回答 UI",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/18"
-    },
-    {
-      "id": "ib_1784244945445",
-      "title": "測試新版 build 的 bottom sheet 與特價 banner",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/16"
-    },
-    {
-      "id": "ib_1784158511113",
-      "title": "新增退回原刷卡機構的退款選項",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/15"
-    },
-    {
-      "id": "ib_1784158511114",
-      "title": "排查 Halfcheck 與表單約會狀態不一致",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/14"
-    },
-    {
-      "id": "ib_1783921892459",
-      "title": "新增 HalfCheck 指派商家自動篩選",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/12"
-    },
-    {
-      "id": "ib_1783921892460",
-      "title": "處理取消後 Pending 邀約時間顯示",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/12"
-    },
-    {
-      "id": "ib_1783921892461",
-      "title": "開通 TablePlus DB 存取以核對 PostHog 差異",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/12"
-    },
-    {
-      "id": "ib_1783921892462",
-      "title": "更新雙平台上架圖以反映新介面",
-      "cat": "task",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/12"
-    },
-    {
-      "id": "ib_1783921892463",
-      "title": "新增 HalfCheck 後台 Lava Points 空投系統",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/12"
     }
   ]
 }
