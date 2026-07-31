@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-07-30T11:40:00+08:00",
+  "generated_at": "2026-07-31T12:20:57+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1785471657069",
+      "title": "接手處理 Ditto 事故回報（事故協定 v0）",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/31"
+    },
+    {
+      "id": "ib_1785471657070",
+      "title": "拍板 Ditto 濫用防護 5 項機制",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "7/30"
+    },
+    {
+      "id": "ib_1785471657071",
+      "title": "提供 ipa 安裝檔與 OTP 測試支援",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "7/30"
+    },
     {
       "id": "ib_1785372834001",
       "title": "建立 Ditto LINE channel 並拍板 hosting",
@@ -120,27 +141,6 @@
       "cat": "bug",
       "src": "ClickUp · 全體頻道",
       "date": "7/23"
-    },
-    {
-      "id": "ib_1784741479431",
-      "title": "設計 Chatroom 空狀態頁面",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/23"
-    },
-    {
-      "id": "ib_1784736999181",
-      "title": "排查 3 筆商家漏通知並確認 n8n 同步",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/23"
-    },
-    {
-      "id": "ib_1784716129898",
-      "title": "核實幽靈帳號問題",
-      "cat": "bug",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/22"
     }
   ]
 }
