@@ -1,10 +1,24 @@
 {
-  "generated_at": "2026-08-01T12:00:00+08:00",
+  "generated_at": "2026-08-02T11:50:21+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
     {
       "id": "ib_1785513600001",
       "title": "依 SOP 通知店家場次排位（場次1確認）",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/1"
+    },
+    {
+      "id": "ib_17856426217051",
+      "title": "確認一筆約會押金是否已退款",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/1"
+    },
+    {
+      "id": "ib_17856426217052",
+      "title": "跟進新註冊用戶照片補件（warm-dm-batch1）",
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
       "date": "8/1"
@@ -35,6 +49,13 @@
       "title": "提供 ipa 安裝檔與 OTP 測試支援",
       "cat": "dept",
       "src": "ClickUp · Lava 頻道",
+      "date": "7/30"
+    },
+    {
+      "id": "ib_17856426217053",
+      "title": "撤回商家群誤發的兩則註冊訊息",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
       "date": "7/30"
     },
     {
@@ -120,27 +141,6 @@
       "cat": "dept",
       "src": "ClickUp · Lava 頻道 SyncUp",
       "date": "7/29"
-    },
-    {
-      "id": "ib_1785195348001",
-      "title": "實作 APP 內字體大小上限設定",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "7/27"
-    },
-    {
-      "id": "ib_1785195348002",
-      "title": "優化滑卡速度快過載入時的等待頁面",
-      "cat": "dept",
-      "src": "ClickUp · 全體頻道",
-      "date": "7/27"
-    },
-    {
-      "id": "ib_1785195348003",
-      "title": "拍板 0727 深潛三張機會卡",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/27"
     }
   ]
 }
