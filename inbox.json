@@ -1,7 +1,56 @@
 {
-  "generated_at": "2026-08-02T11:50:21+08:00",
+  "generated_at": "2026-08-04T07:35:00+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1785777747244",
+      "title": "實作二擇一配對等待開放頁面（Figma 已出）",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/4"
+    },
+    {
+      "id": "ib_1785769775224",
+      "title": "比對 PostHog 二擇一數據與後台數字落差",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/3"
+    },
+    {
+      "id": "ib_1785732973763",
+      "title": "開設 Ditto 專用討論頻道",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/3"
+    },
+    {
+      "id": "ib_1785669592030",
+      "title": "開設內部測試專用頻道",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/2"
+    },
+    {
+      "id": "ib_1785662019528",
+      "title": "設計 superlike 說明 modal 與付款 banner",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/2"
+    },
+    {
+      "id": "ib_1785661720659",
+      "title": "設計 onboarding import from LLM 流程與 UI",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/2"
+    },
+    {
+      "id": "ib_1785661720660",
+      "title": "發布 Halfway 跑團成立行銷貼文",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/2"
+    },
     {
       "id": "ib_1785513600001",
       "title": "依 SOP 通知店家場次排位（場次1確認）",
@@ -91,55 +140,6 @@
       "title": "定稿商家通知 SOP",
       "cat": "task",
       "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834006",
-      "title": "Triage 14 筆 C/D/E 遺留 mapping 案",
-      "cat": "task",
-      "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834007",
-      "title": "正名「柯子花約會」誤植",
-      "cat": "task",
-      "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834008",
-      "title": "完成 Whisper 轉譯管線測試",
-      "cat": "task",
-      "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834009",
-      "title": "走查邀約全流程 8–10 節點圖譜",
-      "cat": "task",
-      "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834010",
-      "title": "撰寫 superlike 規則與通知觸發需求初稿",
-      "cat": "task",
-      "src": "ClickUp · Lava 頻道 SyncUp",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834011",
-      "title": "擬定 KYC 影響功能限制與曝光政策",
-      "cat": "task",
-      "src": "ClickUp · Lava 頻道 SyncUp",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834012",
-      "title": "提出多語言協作與翻譯支援方案",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道 SyncUp",
       "date": "7/29"
     }
   ]
