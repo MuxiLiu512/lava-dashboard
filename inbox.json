@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-08-04T07:35:00+08:00",
+  "generated_at": "2026-08-05T07:35:00+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1785887393439",
+      "title": "變更 PostHog 端點位置",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/4"
+    },
     {
       "id": "ib_1785777747244",
       "title": "實作二擇一配對等待開放頁面（Figma 已出）",
@@ -132,13 +139,6 @@
       "id": "ib_1785372834004",
       "title": "請 Stan 說明付款修復部署時間",
       "cat": "dept",
-      "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834005",
-      "title": "定稿商家通知 SOP",
-      "cat": "task",
       "src": "Drive · 8/2 週會前報告",
       "date": "7/29"
     }
