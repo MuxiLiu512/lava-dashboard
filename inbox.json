@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-08-06T12:02:09+08:00",
+  "generated_at": "2026-08-09T07:35:15+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1786203132191",
+      "title": "修復 n8n 商家通知同步（連日假到場不一致）",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/8"
+    },
+    {
+      "id": "ib_1786193150811",
+      "title": "敲定下週週會改期時間（一或二晚上）",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/8"
+    },
+    {
+      "id": "ib_1786108728009",
+      "title": "調研競品 VibeLink 的 AI 代填 Profile",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/7"
+    },
+    {
+      "id": "ib_1786028467121",
+      "title": "補建 ArkaWynn 商家通知名單並補發通知",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/6"
+    },
     {
       "id": "ib_1785887393439",
       "title": "變更 PostHog 端點位置",
@@ -113,34 +141,6 @@
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
       "date": "7/30"
-    },
-    {
-      "id": "ib_1785372834001",
-      "title": "建立 Ditto LINE channel 並拍板 hosting",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834002",
-      "title": "發送 concierge 暖名單 DM ×5 並記錄回覆",
-      "cat": "dept",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834003",
-      "title": "交付律師材料包並通過 8/7 gate",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/29"
-    },
-    {
-      "id": "ib_1785372834004",
-      "title": "請 Stan 說明付款修復部署時間",
-      "cat": "dept",
-      "src": "Drive · 8/2 週會前報告",
-      "date": "7/29"
     }
   ]
 }
