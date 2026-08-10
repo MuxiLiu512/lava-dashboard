@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-10T07:51:39+08:00",
+  "generated_at": "2026-08-11T07:35:32+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1786404932716",
+      "title": "確認美喝麥喝 8/10 兩場假到場通知不一致",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/10"
+    },
+    {
+      "id": "ib_1786404932717",
+      "title": "處理 ClickUp AI credits 不足致 AI notes 失敗",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/10"
+    },
     {
       "id": "ib_1786203132191",
       "title": "修復 n8n 商家通知同步（連日假到場不一致）",
@@ -124,20 +138,6 @@
     {
       "id": "ib_1785471657070",
       "title": "拍板 Ditto 濫用防護 5 項機制",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/30"
-    },
-    {
-      "id": "ib_1785471657071",
-      "title": "提供 ipa 安裝檔與 OTP 測試支援",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "7/30"
-    },
-    {
-      "id": "ib_17856426217053",
-      "title": "撤回商家群誤發的兩則註冊訊息",
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
       "date": "7/30"
