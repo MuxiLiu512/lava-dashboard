@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-08-11T07:35:32+08:00",
+  "generated_at": "2026-08-12T08:05:00+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1786493000001",
+      "title": "同步美喝麥喝與 ArkaWynn 假到場取消通知",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/11"
+    },
     {
       "id": "ib_1786404932716",
       "title": "確認美喝麥喝 8/10 兩場假到場通知不一致",
@@ -134,13 +141,6 @@
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
       "date": "7/31"
-    },
-    {
-      "id": "ib_1785471657070",
-      "title": "拍板 Ditto 濫用防護 5 項機制",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/30"
     }
   ]
 }
