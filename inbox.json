@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-12T08:05:00+08:00",
+  "generated_at": "2026-08-16T19:58:30+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1786881510001",
+      "title": "確認 ArkaWynn 8/15 取消場次是否需向店家補說明",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/15"
+    },
+    {
+      "id": "ib_1786881510002",
+      "title": "驗證已取消 Meeting 停止發通知的修復是否生效",
+      "cat": "bug",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/14"
+    },
     {
       "id": "ib_1786493000001",
       "title": "同步美喝麥喝與 ArkaWynn 假到場取消通知",
@@ -127,20 +141,6 @@
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
       "date": "8/1"
-    },
-    {
-      "id": "ib_1785471657069",
-      "title": "接手處理 Ditto 事故回報（事故協定 v0）",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/31"
-    },
-    {
-      "id": "ib_1785513600002",
-      "title": "拍板 Prompt v2 與 Reveal 資訊量（8/2 週會）",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "7/31"
     }
   ]
 }
