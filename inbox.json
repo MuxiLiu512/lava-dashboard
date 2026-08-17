@@ -1,7 +1,56 @@
 {
-  "generated_at": "2026-08-17T09:08:05+08:00",
+  "generated_at": "2026-08-18T07:35:45+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1787000000001",
+      "title": "跟進 GitHub 恢復後補發後端版本",
+      "cat": "task",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/18"
+    },
+    {
+      "id": "ib_1787000000002",
+      "title": "重新送審 App 版本（待版本發布後）",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/18"
+    },
+    {
+      "id": "ib_1787000000003",
+      "title": "確認 ArkaWynn 8/17 已取消場次商家是否空等",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/17"
+    },
+    {
+      "id": "ib_1787000000004",
+      "title": "補建憩所與 JODOBE 的 Notify_log 資料列",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/17"
+    },
+    {
+      "id": "ib_1787000000005",
+      "title": "補填 Dates 分頁 Person In Charge 欄位",
+      "cat": "task",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/17"
+    },
+    {
+      "id": "ib_1787000000006",
+      "title": "改版樂交友聯名 banner 為雙品牌介紹",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/17"
+    },
+    {
+      "id": "ib_1787000000007",
+      "title": "追蹤合作影片第三支產出與 Lava 免服務費露出",
+      "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/17"
+    },
     {
       "id": "ib_1786894463001",
       "title": "同步 ArkaWynn 8/16 假到場與改期未通知",
@@ -15,6 +64,13 @@
       "cat": "bug",
       "src": "ClickUp · 約會資訊頻道",
       "date": "8/16"
+    },
+    {
+      "id": "ib_1787000000008",
+      "title": "執行 preview 版測試清單（Superlike 橫幅／AB）",
+      "cat": "task",
+      "src": "ClickUp · 內部測試頻道",
+      "date": "8/15"
     },
     {
       "id": "ib_1786881510001",
@@ -85,62 +141,6 @@
       "cat": "dept",
       "src": "ClickUp · Lava 頻道",
       "date": "8/4"
-    },
-    {
-      "id": "ib_1785777747244",
-      "title": "實作二擇一配對等待開放頁面（Figma 已出）",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/4"
-    },
-    {
-      "id": "ib_1785769775224",
-      "title": "比對 PostHog 二擇一數據與後台數字落差",
-      "cat": "task",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/3"
-    },
-    {
-      "id": "ib_1785732973763",
-      "title": "開設 Ditto 專用討論頻道",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "8/3"
-    },
-    {
-      "id": "ib_1785669592030",
-      "title": "開設內部測試專用頻道",
-      "cat": "task",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/2"
-    },
-    {
-      "id": "ib_1785662019528",
-      "title": "設計 superlike 說明 modal 與付款 banner",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/2"
-    },
-    {
-      "id": "ib_1785661720659",
-      "title": "設計 onboarding import from LLM 流程與 UI",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/2"
-    },
-    {
-      "id": "ib_1785661720660",
-      "title": "發布 Halfway 跑團成立行銷貼文",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/2"
-    },
-    {
-      "id": "ib_1785513600001",
-      "title": "依 SOP 通知店家場次排位（場次1確認）",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "8/1"
     }
   ]
 }
