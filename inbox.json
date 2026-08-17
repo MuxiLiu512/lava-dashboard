@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-16T19:58:30+08:00",
+  "generated_at": "2026-08-17T09:08:05+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
+    {
+      "id": "ib_1786894463001",
+      "title": "同步 ArkaWynn 8/16 假到場與改期未通知",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/16"
+    },
+    {
+      "id": "ib_1786894463002",
+      "title": "補發你家樓下 8/28 取消場次通知",
+      "cat": "bug",
+      "src": "ClickUp · 約會資訊頻道",
+      "date": "8/16"
+    },
     {
       "id": "ib_1786881510001",
       "title": "確認 ArkaWynn 8/15 取消場次是否需向店家補說明",
@@ -124,20 +138,6 @@
     {
       "id": "ib_1785513600001",
       "title": "依 SOP 通知店家場次排位（場次1確認）",
-      "cat": "task",
-      "src": "ClickUp · 約會資訊頻道",
-      "date": "8/1"
-    },
-    {
-      "id": "ib_17856426217051",
-      "title": "確認一筆約會押金是否已退款",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/1"
-    },
-    {
-      "id": "ib_17856426217052",
-      "title": "跟進新註冊用戶照片補件（warm-dm-batch1）",
       "cat": "task",
       "src": "ClickUp · 約會資訊頻道",
       "date": "8/1"
