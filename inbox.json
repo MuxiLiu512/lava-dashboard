@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T07:35:45+08:00",
+  "generated_at": "2026-08-19T11:49:40+08:00",
   "source": "ClickUp 頻道 + Google Drive 會議記錄",
   "items": [
     {
@@ -13,6 +13,13 @@
       "id": "ib_1787000000002",
       "title": "重新送審 App 版本（待版本發布後）",
       "cat": "dept",
+      "src": "ClickUp · Lava 頻道",
+      "date": "8/18"
+    },
+    {
+      "id": "ib_1786404932717",
+      "title": "處理 ClickUp AI credits 不足致 AI notes 失敗",
+      "cat": "task",
       "src": "ClickUp · Lava 頻道",
       "date": "8/18"
     },
@@ -49,6 +56,13 @@
       "title": "追蹤合作影片第三支產出與 Lava 免服務費露出",
       "cat": "dept",
       "src": "ClickUp · Lava 頻道",
+      "date": "8/17"
+    },
+    {
+      "id": "ib_1787100338001",
+      "title": "建置 self-hosted PostHog production 環境",
+      "cat": "dept",
+      "src": "ClickUp · 內部測試頻道",
       "date": "8/17"
     },
     {
@@ -101,13 +115,6 @@
       "date": "8/10"
     },
     {
-      "id": "ib_1786404932717",
-      "title": "處理 ClickUp AI credits 不足致 AI notes 失敗",
-      "cat": "task",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/10"
-    },
-    {
       "id": "ib_1786203132191",
       "title": "修復 n8n 商家通知同步（連日假到場不一致）",
       "cat": "bug",
@@ -134,13 +141,6 @@
       "cat": "bug",
       "src": "ClickUp · 約會資訊頻道",
       "date": "8/6"
-    },
-    {
-      "id": "ib_1785887393439",
-      "title": "變更 PostHog 端點位置",
-      "cat": "dept",
-      "src": "ClickUp · Lava 頻道",
-      "date": "8/4"
     }
   ]
 }
